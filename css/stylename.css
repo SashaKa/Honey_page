@@ -1,0 +1,30 @@
+/* font-family: "ProximaNovaRegular"; */
+@font-face {
+    font-family: "ProximaNovaRegular";
+    src: url("../fonts/ProximaNovaRegular/ProximaNovaRegular.eot");
+    src: url("../fonts/ProximaNovaRegular/ProximaNovaRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/ProximaNovaRegular/ProximaNovaRegular.woff") format("woff"),
+    url("../fonts/ProximaNovaRegular/ProximaNovaRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "ClearSansRegular"; */
+@font-face {
+    font-family: "ClearSansRegular";
+    src: url("../fonts/ClearSansRegular/ClearSansRegular.eot");
+    src: url("../fonts/ClearSansRegular/ClearSansRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/ClearSansRegular/ClearSansRegular.woff") format("woff"),
+    url("../fonts/ClearSansRegular/ClearSansRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "ClearSansBold"; */
+@font-face {
+    font-family: "ClearSansBold";
+    src: url("../fonts/ClearSansBold/ClearSansBold.eot");
+    src: url("../fonts/ClearSansBold/ClearSansBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/ClearSansBold/ClearSansBold.woff") format("woff"),
+    url("../fonts/ClearSansBold/ClearSansBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
