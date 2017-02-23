@@ -1,6 +1,107 @@
+body {
+    margin: 0;
+    max-width: 1600px;
+    background-color: #fefefd;
+    color: #56534c;
+    font-family: "ClearSansRegular", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+}
 p {
-    font-family: "ProximaNovaRegular", sans-serif;;
+    font-family: "ProximaNovaRegular", sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
 }
 h2 {
-     font-family: "ClearSansRegular", sans-serif;
+     font-family: "ClearSansBold", sans-serif;
+     font-size:3rem;
+     line-height: 1.875rem;
+}
+h4 {
+    font-family: "ClearSansBold", sans-serif;
+    color: #a78365;
+    font-size: 0.875rem
+    line-height:  1.875rem;
+
+}
+a {
+    text-decoration: none;
+}
+.container {
+    padding: 0 10.625%;
+    margin: 0 auto;
+}
+/*------------------------*HEADER------------------------------*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ddae81;
+    align-items: center;
+}
+.header-nav {
+    background-color: rgba(144, 132, 116, 1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.main-menu {
+
+}
+.main-menu li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 2rem;
+
+}
+.main-link {
+    color: #e2dfdd;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    font-family: "ClearSansBold", sans-serif;
+}
+.social {
+    font-size: 0;
+}
+.promo {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin: 5% 25%;
+    align-items: baseline;
+}
+/*-----------------------------MAIN----------------------*/
+#aboutus {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.text-block {
+
+}
+.text-block, .photo-block {
+    width: 39.375%;
+ }
+ .photo-block {
+     align-items: center;
+     display: flex;
+     height: 32.625rem;
+ }
+.photo-block img {
+    width: 18.75rem;
+    height: 15.625rem;
+
+}
+#assortment {
+    width: 60.375%;
+    display: flex;
+    justify-content: center;
+    padding: 0 15rem;
+    background-color: #e8e8e1;
+}
+.wrap-img  {
+    height: 32rem;
+    width: 26.25rem;
 }

@@ -2,81 +2,103 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
         <link href="css/normalize.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
         <link href="css/stylename.css" rel="stylesheet">
         <title>Алтайский мёд</title>
     </head>
     <body>
-        <header class="container">
-            <img class="logo"width="150"height="110"alt="Добрый мёд"/>
-            <nav class="main-menu">
-                <ul>
-                    <li><a href="main-link"></a>О нас</li>
-                    <li><a href="main-link"></a>О мёде</li>
-                    <li><a href="main-link"></a>Продукция</li>
-                    <li><a href="main-link"></a>Контакты</li>
-                </ul>
-            </nav>
-            <section class="social">
-                <a href="https://vk.com/altaybees" class="social-btn social-btn-vk"></a>
-                <a href="https://facebook.com/altaybees" class="social-btn social-btn-fb"></a>
-            </section>
+        <header>
+            <div class="container">
+                <div class="header-nav">
+                    <img class="logo"width="150"height="110"alt="Добрый мёд"/>
+                    <nav class="main-menu">
+                        <ul>
+                            <li><a href="#" class="main-link">О нас</a></li>
+                            <li><a href="#" class="main-link">Продукция</a></li>
+                            <li><a href="#" class="main-link">Качество</a></li>
+                            <li><a href="#" class="main-link">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <section class="social">
+                        <a href="https://vk.com/altaybees" class="social-btn social-btn-vk">Vk<img src="img/vk.png"/></a>
+                        <a href="https://facebook.com/altaybees" class="social-btn social-btn-fb">Fb<img src="img/fb.png"/></a>
+                    </section>
+                </div>
+                <div class="promo">
+                    <h1>Мёд из Горного Алтая с любовью</h1>
+                    <h3>Алтай - это красота, гармония и щедрость природы, дарами которой с благодарностью может воспользоваться любой.</h3>
+                    <button type="text" class="product">Продукты нашего труда</button>
+                </div>
+            </div>
         </header>
-        <main class="container">
-            <div class="promo">
-                <h1>Мёд из Горного Алтая с любовью</h1>
-                <h3>Алтай - это красота, гармония и щедрость природы, дарами которой с благодарностью может воспользоваться любой.</h3>
-                <button type="text" class="product">Продукты нашего труда</button>
-            </div>
-            <div class="aboutus">
-                <article class="text-block">
-                    <h2>Пчеловодство как искусство</h2>
-                    <span class="annotation" >Наша семья занимается пчеловождением несколько десятков лет. </span>
-                    <p>Алтай - это наша Родина! Это одно из красивейших мест на Земле. Его красота выражена не только в синеве голубого неба, яркости светящего над головой солнца, величественности гор и просторе степей, но и красоте человеческих душ и пылкости сердец всех тех, кто здесь живет! Мы такие разные, но у нас есть одно общее - </p>
-                    <p>Хозяйка пасеки</p>
-                    <div class="avatar">
-                        <em>Татьяна</em>
-                        <img src="" alt=""/>
-                        <em>Ганова-Поликарпова</em>
+        <main>
+            <div class="container">
+                <section id="aboutus">
+                    <article class="text-block">
+                        <h2>Пчеловодство как искусство</h2>
+                        <h4 class="annotation">Наша семья занимается пчеловождением несколько десятков лет. </h4>
+                        <p>Алтай - это наша Родина! Это одно из красивейших мест на Земле. Его красота выражена не только в синеве голубого неба, яркости светящего над головой солнца, величественности гор и просторе степей, но и красоте человеческих душ и пылкости сердец всех тех, кто здесь живет! Мы такие разные, но у нас есть одно общее - </p>
+                        <p>Хозяйка пасеки</p>
+                        <div class="avatar">
+                            <em>Татьяна</em>
+                            <img src="" alt=""/>
+                            <em>Ганова-Поликарпова</em>
+                        </div>
+                        <q>Некая цитата</q>
+                    </article>
+                    <article class="photo-block">
+                        <img src="" alt=""width=""height="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <div class="absolute-element on-photo"></div>
+                    </article>
+                </section>
+                <section id="assortment">
+                    <div class="wrap-img">
+                        <img class="iproduct-img" src="" alt="">
                     </div>
-                    <q>Некая цитата</q>
-                </article>
-                <article class="photo-block">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <div class="absolute-element on-photo"></div>
-                </article>
-            </div>
-            <section class="assortment">
-                <div class="wrap-img">
-                    <img class="iproduct-img" src="" alt="">
-                </div>
-                <div class="about-product">
-                    <h2 class="title-product">Мёд разнотравье</h2>
-                    <h4 class="annotation-product">Традиционно прекрасный</h4>
-                    <p class="describe-product">Большой процент гречихи. Невероятно ароматный, благородной естественно- густой консистенции мёд. </p>
-                    <div class="slider-doc">
-                        <button type="button" class="slide-btn previous-img"></button>
-                        <img src=""class"small-img" alt="">
-                        <img src=""class"small-img" alt="">
-                        <img src=""class"small-img" alt="">
-                        <button type="button" class="slide-btn forward-img"></button>
+                    <div class="about-product">
+                        <h2 class="title-product">Мёд разнотравье</h2>
+                        <h4 class="annotation-product">Традиционно прекрасный</h4>
+                        <p class="describe-product">Большой процент гречихи. Невероятно ароматный, благородной естественно- густой консистенции мёд. </p>
+                        <div class="slider-doc">
+                            <button type="button" class="slide-btn previous-img"></button>
+                            <img src=""class"small-img" alt="">
+                            <img src=""class"small-img" alt="">
+                            <img src=""class"small-img" alt="">
+                            <button type="button" class="slide-btn forward-img"></button>
+                        </div>
+                        <div class="absolute-element"></div>
                     </div>
-                    <div class="absolute-element"></div>
-                </div>
-            </section>
-            <section class="quality">
-                <h2>Сертификация</h2>
-                <p class="annotation">Официальные документы и награды</p>
-                <button type="button" class="name-document">Аттестат</button>
-                <p class="about-document">В соответствии аттестатом аккредитации в республиканской ветеринарной лаборатории, показатель диастазного числа равен 43.82 ед. Готе, что  говорит об очень высоком качестве мёда. </p>
-                <div class="doc-wrap">
-                    <img src="" alt="" class="doc-img"/>
-                </div>
-            </section>
+                </section>
+                <section id="quality">
+                    <h2>Сертификация</h2>
+                    <p class="annotation">Официальные документы и награды</p>
+                    <button type="button" class="name-document">Аттестат</button>
+                    <p class="about-document">В соответствии аттестатом аккредитации в республиканской ветеринарной лаборатории, показатель диастазного числа равен 43.82 ед. Готе, что  говорит об очень высоком качестве мёда. </p>
+                    <div class="doc-wrap">
+                        <img src="" alt="" class="doc-img"/>
+                    </div>
+                </section>
+                <section id="distributers">
+                    <h2 class="where-buy">Наши представители</h2>
+                    <div class="wrap-list">
+                        <div class="distributer-card">
+                            <img src="" alt="">
+                            <h4></h4>
+                            <p></p>
+                        </div>
+                        <div class="distributer-card">
+                            <img src="" alt="">
+                            <h4></h4>
+                            <p></p>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </main>
     </body>
 </html>
