@@ -16,6 +16,7 @@ h2 {
      font-family: "ClearSansBold", sans-serif;
      font-size:3rem;
      line-height: 1.875rem;
+     text-align: center;
 }
 h4 {
     font-family: "ClearSansBold", sans-serif;
@@ -63,15 +64,25 @@ header {
 }
 .social {
     font-size: 0;
-    position: relative;
+    display: flex;
 }
-.social .social-btn-vk {
+.social-btn {
     height: 35px;
     width: 35px;
     position: absolute;
-   background-image: url(../img/vk.svg);
-   background-repeat: no-repeat;
-   background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../img/sprite.png);
+}
+.social .social-btn-vk {
+    top: -5px;
+    left: 8px;
+    background-position: -5px -121px;
+
+}
+.social .social-btn-fb {
+    top: -11px;    
+    left: 10px;
+    background-position: -8px -82px;
 }
 .promo {
     width: 60%;
@@ -82,73 +93,34 @@ header {
 }
 
 /*-----------Social-icons-hexagon--------------------*/
-/*.hexagon-vk {
+.hexagon {
   position: relative;
-  width: 35px;
-  height: 20.21px;
-  margin: 10.10px 0;
-  background-image: url(../img/vk.svg);
-  background-repeat: no-repeat;
-  background-size: auto 40.4145px;
-  background-position: center;
+  width: 40px;
+  height: 23.09px;
+  background-color: #64C7CC;
+  margin: 11.55px 2px;
+  position: relative;
 }
 
-.hexTop,
-.hexBottom {
-  position: absolute;
-  z-index: 1;
-  width: 24.75px;
-  height: 24.75px;
-  overflow: hidden;
-  -webkit-transform: scaleY(0.5774) rotate(-45deg);
-  -ms-transform: scaleY(0.5774) rotate(-45deg);
-  transform: scaleY(0.5774) rotate(-45deg);
-  background: inherit;
-  left: 5.13px;
-}
-
-/*counter transform the bg image on the caps*
-.hexTop:after,
-.hexBottom:after {
-  content: "";
-  position: absolute;
-  width: 35.0000px;
-  height: 20.207259421636902px;
-  -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-10.1036px);
-  -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-10.1036px);
-  transform:          rotate(45deg) scaleY(1.7321) translateY(-10.1036px);
-  -webkit-transform-origin: 0 0;
-  -ms-transform-origin: 0 0;
-  transform-origin: 0 0;
-  background: inherit;
-}
-
-.hexTop {
-  top: -12.3744px;
-}
-
-.hexTop:after {
-  background-position: center top;
-}
-
-.hexBottom {
-  bottom: -12.3744px;
-}
-
-.hexBottom:after {
-  background-position: center bottom;
-}
-
+.hexagon:before,
 .hexagon:after {
   content: "";
   position: absolute;
-  top: 0.0000px;
-  left: 0;
-  width: 35.0000px;
-  height: 20.2073px;
-  z-index: 2;
-  background: inherit;
-}*/
+  width: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+}
+
+.hexagon:before {
+  bottom: 100%;
+  border-bottom: 11.55px solid #64C7CC;
+}
+
+.hexagon:after {
+  top: 100%;
+  width: 0;
+  border-top: 11.55px solid #64C7CC;
+}
 /*-----------------------------MAIN----------------------*/
 #aboutus {
     display: flex;
@@ -219,7 +191,8 @@ header {
     justify-content: space-around;
     background-color: #454859;
     color: #ffffff;
-    padding: 3rem 0;
+    padding: 3% 0.5%;
+    width: 100%;
 }
 .wrap-doc-info {
         width: 39.635%;
@@ -236,9 +209,42 @@ header {
     line-height: 1.875rem;
     font-family: "ClearSansBold", sans-serif;
     color: #ffffff;
-    background-color: #dfc691;
+    background-color: transparent;
     padding: 0.6rem 1.2rem;
-    background-color: #dfc691;
     outline-color: #dfc691;
     border-radius: 0.3rem;
+    cursor: pointer;
+}
+.name-document:hover {
+    color: #454859;
+    background-color: #ffffff;
+}
+.name-document:active {
+    color: #363946 ;
+}
+#distributers{
+    background-color:#e3dfd6;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 3% 0.5%;
+
+}
+.wrap-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.where-buy {
+        text-align: center;
+}
+.city-avatar {
+    width: 6.25rem;
+    height: 6.25rem;
+}
+.map {
+    width: 42.8125%;
+    height: 35.625rem;
+    border: 0.625rem solid #ffffff;
 }
