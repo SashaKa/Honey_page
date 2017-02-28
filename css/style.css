@@ -41,6 +41,9 @@ header {
     background-color: #ddae81;
     align-items: center;
 }
+.logo {
+    width: 11%;
+}
 [type="checkbox"], label {
 	  display: none;
 }
@@ -135,7 +138,9 @@ header {
     margin: 5% 25%;
     align-items: baseline;
 }
-
+.product {
+    align-self: center;
+}
 /*-----------------------------MAIN----------------------*/
 #aboutus {
     display: flex;
@@ -324,25 +329,42 @@ header {
     background: #222;
     text-indent: 20px;
 }
-@media screen and (max-width: 562px) {
-    .logo {
-        width: 25%;
-    }
-}
-/*.main-menu > ul > li {
+.main-menu > ul > li {
 	margin-left: 0px;
 }
 
-    	.main-menu > ul li ul li {
-      		display: block;
-    		  float: none;
-    	}
-
-    	.main-menu > ul li ul {
-    		  display: block;
-      		position: relative;
-      		width: 100%;
-    		  z-index: 9999;
-    		  float: none;
-    	}*/
+#nav> ul li ul li {
+    display: block;
+    float: none;
     }
+
+.main-menu > ul li ul {
+    display: block;
+    position: relative;
+    width: 100%;
+    z-index: 9999;
+    float: none;
+    }
+}
+#aboutus {
+    width: 100%;
+    flex-direction: column;
+}
+.photo-block {
+    justify-content: space-between;
+    flex-direction: column;
+}
+@media screen and (max-width: 558px) {
+    .logo {
+        width: 25%;
+        margin: 0;
+    }
+}
+label {
+    right: 20px;
+}
+@media only screen and (min-width : 320px) and (max-width : 479px) {
+    .logo {
+        margin-right: 6rem;
+    }
+}
