@@ -139,25 +139,38 @@ header {
     align-items: baseline;
 }
 .product {
-    align-self: center;
+    align-self: stretch;
 }
 /*-----------------------------MAIN----------------------*/
+@media screen and (max-width: 880px) {}
 #aboutus {
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-around;
 }
-.text-block {
+
+@media screen and (max-width: 740px) {
+    #aboutus{
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: column;
+    }
 
 }
 .text-block, .photo-block {
     width: 39.375%;
  }
+ @media screen and (max-width: 650px) {
+     .photo-block, .photo-block  {
+        width: 90%;
+
+ }
+ }
  .photo-block {
      align-items: center;
      display: flex;
-     height: 32.625rem;
+     height: 19.625rem;
  }
 .photo-block img {
     width: 18.75rem;
@@ -171,18 +184,31 @@ header {
     padding: 8.75rem 15rem;
     background-color: #e8e8e1;
 }
+@media screen and (max-width: 920px) {
+    #assortment{
+        flex-direction: column;
+        padding: 1rem 2rem;
+    }
+
+}
 .wrap-block {
     display: flex;
     justify-content: center;
     background-color: #ffffff;
     height: 32rem;
 }
-
+@media screen and (max-width: 920px) {
+    .wrap-img {
+        display: flex;
+        flex-wrap: wrap;
+       }
+}
 .wrap-img  {
     height: 32rem;
     width: 36.25rem;
     background-color: #d5d2d0;
 }
+
 .about-product {
     display: flex;
     flex-direction: column;
@@ -219,11 +245,18 @@ header {
         text-align: center;
 
 }
+@media screen and (max-width:748px) {
+    .doc-wrap {
+        display: none;
+    }
+
+}
 .doc-wrap {
     width: 27.375rem;
     height: 37.5rem;
     background-color: #f3f1e9;
 }
+
 .name-document {
     font-size: 1.875rem;
     line-height: 1.875rem;
@@ -345,14 +378,6 @@ header {
     z-index: 9999;
     float: none;
     }
-}
-#aboutus {
-    width: 100%;
-    flex-direction: column;
-}
-.photo-block {
-    justify-content: space-between;
-    flex-direction: column;
 }
 @media screen and (max-width: 558px) {
     .logo {
