@@ -129,8 +129,6 @@ header {
   width: 0;
   border-top: 11.55px solid #64C7CC;
 }
-
-
 .promo {
     width: 60%;
     display: flex;
@@ -142,41 +140,11 @@ header {
     align-self: stretch;
 }
 /*-----------------------------MAIN----------------------*/
-@media screen and (max-width: 880px) {}
-#aboutus {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-around;
-}
 
-@media screen and (max-width: 740px) {
-    #aboutus{
-        flex-wrap: wrap;
-        display: flex;
-        flex-direction: column;
-    }
-
-}
 .text-block, .photo-block {
     width: 39.375%;
  }
- @media screen and (max-width: 650px) {
-     .photo-block, .photo-block  {
-        width: 90%;
 
- }
- }
- .photo-block {
-     align-items: center;
-     display: flex;
-     height: 19.625rem;
- }
-.photo-block img {
-    width: 18.75rem;
-    height: 15.625rem;
-
-}
 #assortment {
     width: 60.375%;
     display: flex;
@@ -184,24 +152,12 @@ header {
     padding: 8.75rem 15rem;
     background-color: #e8e8e1;
 }
-@media screen and (max-width: 920px) {
-    #assortment{
-        flex-direction: column;
-        padding: 1rem 2rem;
-    }
 
-}
 .wrap-block {
     display: flex;
     justify-content: center;
     background-color: #ffffff;
     height: 32rem;
-}
-@media screen and (max-width: 920px) {
-    .wrap-img {
-        display: flex;
-        flex-wrap: wrap;
-       }
 }
 .wrap-img  {
     height: 32rem;
@@ -243,13 +199,6 @@ header {
 .wrap-doc-info {
         width: 39.635%;
         text-align: center;
-
-}
-@media screen and (max-width:748px) {
-    .doc-wrap {
-        display: none;
-    }
-
 }
 .doc-wrap {
     width: 27.375rem;
@@ -301,7 +250,21 @@ header {
     height: 35.625rem;
     border: 0.625rem solid #ffffff;
 }
-/*----------media-------------------*/
+/*----------MEDIA QUARIS------------------*/
+
+@media screen and (max-width: 920px) {
+
+
+}
+
+@media screen and (max-width: 880px) {
+    #aboutus {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
 @media screen and (max-width: 768px) {
     .container {
         padding: 0;
@@ -315,68 +278,74 @@ header {
     .logo {
         margin-right: 10rem;
     }
-
-    .promo {
-        text-align: center;
-    }
     nav ul {
 		  display: none;
 	}
     label {
-    display: block;
-    background: transparent;
-    width: 45px;
-    height: 40px;
-    cursor: pointer;
-    position: absolute;
-    right: 87px;
-    top: 35px;
-}
+        display: block;
+        background: transparent;
+        width: 45px;
+        height: 40px;
+        cursor: pointer;
+        position: absolute;
+        right: 87px;
+        top: 35px;
+    }
 
     label:after{
-      content:'';
-      display: block;
-      width: 30px;
-      height: 5px;
-      background: #ffc650;
-      margin: 7px 5px;
-      box-shadow: 0px 10px 0px #ffc650, 0px 20px 0px #ffc650;
+        content:'';
+        display: block;
+        width: 30px;
+        height: 5px;
+        background: #ffc650;
+        margin: 7px 5px;
+        box-shadow: 0px 10px 0px #ffc650, 0px 20px 0px #ffc650;
     }
 
-	[type="checkbox"]:checked ~ .main-menu {
-    display: block;
-    z-index: 9999;
-    position: absolute;
-    right: 20px;
-    left: 20px;
-}
-
-.main-link {
-    color: #777;
-}
-
-.main-menu li {
-    display: block;
-    width: 100%;
-    text-align: left;
-    background: #222;
-    text-indent: 20px;
-}
-.main-menu > ul > li {
-	margin-left: 0px;
-}
-
-#nav> ul li ul li {
-    display: block;
-    float: none;
+    .promo {
+        text-align: center;
+    }
+    #aboutus{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .doc-wrap {
+        display: none;
     }
 
-.main-menu > ul li ul {
-    display: block;
-    position: relative;
-    width: 100%;
-    z-index: 9999;
-    float: none;
+}
+@media screen and (max-width: 650px) {
+    .photo-block, .photo-block  {
+       width: 96%;
+    }
+    .photo-block {
+        align-items: center;
+        display: flex;
+        height: 12.625rem;
+    }
+    .photo-block img {
+       width: 18.75rem;
+       height: 9.625rem;
+    }
+    #assortment{
+         width: 196%;
+         padding: 0;
+     }
+    .wrap-block {
+        flex-wrap: wrap;
+    }
+    .wrap-img {
+        flex-grow: 1;
+        width: 96%;
+    }
+    #quality{
+        margin-top: 22rem;
+    }
+    #distributers {
+        flex-direction: column;
+    }
+    .map {
+        width: 96%;
     }
 }
 @media screen and (max-width: 558px) {
@@ -384,9 +353,10 @@ header {
         width: 25%;
         margin: 0;
     }
-}
-label {
-    right: 20px;
+
+    label {
+        right: 20px;
+    }
 }
 @media only screen and (min-width : 320px) and (max-width : 479px) {
     .logo {
