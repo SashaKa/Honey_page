@@ -40,25 +40,16 @@ header {
     align-items: center;
     background-color: #ddae81;
     align-items: center;
+    position: relative;
 }
 .logo {
     width: 11%;
 }
-[type="checkbox"], label {
-	  display: none;
-}
-.header-nav {
-    background-color: rgba(144, 132, 116, 1);
-    display: flex;
-    flex-grow: 1;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
 .main-menu li {
     list-style: none;
     display: inline-block;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
+
 }
 .main-link {
     color: #e2dfdd;
@@ -66,7 +57,41 @@ header {
     line-height: 1.5rem;
     font-family: "ClearSansBold", sans-serif;
 }
-
+.header-nav {
+    background-color: rgba(144, 132, 116, 1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+[type="checkbox"], label {
+	  display: none;
+}
+label {
+    background: transparent;
+    width: 45px;
+    height: 40px;
+    cursor: pointer;
+    position: absolute;
+    right: 87px;
+    top: 35px;
+}
+label:after{
+    content:'';
+    display: block;
+    width: 30px;
+    height: 5px;
+    background: #ffc650;
+    margin: 7px 5px;
+    box-shadow: 0px 10px 0px #ffc650, 0px 20px 0px #ffc650;
+}
+.minify {
+    display: block;
+    position: absolute;
+    flex-direction: column;
+    background-color: rgb(56%, 78%, 17%, 0.5);
+    width: 90%;
+}
 .social {
     font-size: 0;
     display: flex;
@@ -146,11 +171,10 @@ header {
  }
 
 #assortment {
-    width: 60.375%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    padding: 8.75rem 15rem;
-    background-color: #e8e8e1;
+    /*padding: 5.75rem 10rem;*/
 }
 
 .wrap-block {
@@ -190,6 +214,7 @@ header {
 }
 #quality {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     background-color: #454859;
     color: #ffffff;
@@ -227,6 +252,7 @@ header {
 #distributers{
     background-color:#e3dfd6;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
     padding: 3% 0.5%;
@@ -234,12 +260,13 @@ header {
 }
 .wrap-list {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
 .where-buy {
-        text-align: center;
+    text-align: center;
 }
 .city-avatar {
     width: 6.25rem;
@@ -247,7 +274,7 @@ header {
 }
 .map {
     width: 42.8125%;
-    height: 35.625rem;
+    height: 25.625rem;
     border: 0.625rem solid #ffffff;
 }
 /*----------MEDIA QUARIS------------------*/
@@ -272,35 +299,6 @@ header {
     h2 {
         font-size: 1.5rem;
     }
-    .header-nav {
-        flex-direction: row-reverse;
-    }
-    .logo {
-        margin-right: 10rem;
-    }
-    nav ul {
-		  display: none;
-	}
-    label {
-        display: block;
-        background: transparent;
-        width: 45px;
-        height: 40px;
-        cursor: pointer;
-        position: absolute;
-        right: 87px;
-        top: 35px;
-    }
-
-    label:after{
-        content:'';
-        display: block;
-        width: 30px;
-        height: 5px;
-        background: #ffc650;
-        margin: 7px 5px;
-        box-shadow: 0px 10px 0px #ffc650, 0px 20px 0px #ffc650;
-    }
 
     .promo {
         text-align: center;
@@ -315,20 +313,24 @@ header {
 
 }
 @media screen and (max-width: 650px) {
-    .photo-block, .photo-block  {
-       width: 96%;
+    .main-menu li {
+        padding: 0 0.2rem;
+    }
+    .text-block {
+        width: 90%;
     }
     .photo-block {
         align-items: center;
         display: flex;
         height: 12.625rem;
+        width: 90%;
     }
     .photo-block img {
        width: 18.75rem;
        height: 9.625rem;
     }
     #assortment{
-         width: 196%;
+         width: 100%;
          padding: 0;
      }
     .wrap-block {
@@ -348,18 +350,28 @@ header {
         width: 96%;
     }
 }
-@media screen and (max-width: 558px) {
-    .logo {
-        width: 25%;
-        margin: 0;
+@media screen and (max-width: 600px) {
+    .header-nav {
+        justify-content: space-between;
     }
-
     label {
-        right: 20px;
+        display: block;
+        right: 3rem;
+    }
+    nav ul {
+		  display: none;
+	}
+
+    .logo {
+        margin-right: 7rem;
+        order: 1;
+        width: 25%;
+    }
+    .social {
+        order: 0;
+        margin-right: 4rem;
     }
 }
 @media only screen and (min-width : 320px) and (max-width : 479px) {
-    .logo {
-        margin-right: 6rem;
-    }
+
 }
