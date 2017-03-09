@@ -56,6 +56,9 @@ header {
     line-height: 1.5rem;
     font-family: "ClearSansBold", sans-serif;
 }
+.main-link:hover{
+    color: #FF9100;
+}
 .header-nav {
     background-color: rgba(144, 132, 116, 1);
     display: flex;
@@ -93,9 +96,6 @@ label:after{
     background-color: rgb(56%, 78%, 17%, 0.5);
     width: 90%;
 }
-
-
-
 .social {
     font-size: 0;
     display: flex;
@@ -166,7 +166,24 @@ label:after{
     align-items: baseline;
 }
 .product {
-    align-self: stretch;
+        align-self: stretch;
+    padding: 0.5rem 0;
+    font-weight: 800;
+    border-radius: 5px;
+    border: none;
+    background-color: #FF9100;
+    color: #424242;
+    box-shadow: 2px -2px #FF6D00;
+}
+.product:hover{
+    background-color: #FF6D00;
+    color: #424242;
+    box-shadow: -2px 2px #BDBDBD;
+}
+.product:active{
+    background-color: #BDBDBD;
+    color: #FF9100;
+    box-shadow: 2px -2px #424242;
 }
 /*-----------------------------MAIN----------------------*/
 #aboutus {
@@ -174,6 +191,7 @@ label:after{
     flex-flow: row;
     justify-content: space-between;
     align-items: center;
+    margin: 2rem 0;
 }
 @media screen and (max-width:41.250em) {
     #aboutus {
@@ -217,12 +235,13 @@ label:after{
     height: 32rem;
 }
 .wrap-img  {
-    height: 32rem;
+    height: 30rem;
     width: 36.25rem;
     background-color: #d5d2d0;
 }
 .product-img {
     width: 100%;
+    height: 100%;
 }
 .about-product {
     display: flex;
@@ -242,10 +261,24 @@ label:after{
 .slider-doc {
     align-self: center;
     margin-top: auto;
+    position: relative;
 }
 .slider-doc img {
     width: 6.25rem;
     height: 6.25rem;
+}
+/*-----------slider product---------*/
+.slide-btn {
+    position: absolute;
+}
+.previous-btn {
+    top: 50%;
+    left: -10%;
+
+}
+.forward-btn {
+    top:50%;
+    right: -10%;
 }
 #quality {
     display: flex;
@@ -282,7 +315,8 @@ label:after{
     background-color: #ffffff;
 }
 .name-document:active {
-    color: #363946 ;
+    color: #363946;
+    background-color:#dfc691;
 }
 #distributers{
     background-color:#e3dfd6;
