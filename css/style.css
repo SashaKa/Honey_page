@@ -16,8 +16,9 @@ p {
 h2 {
      font-family: "ClearSansBold", sans-serif;
      font-size:3rem;
-     line-height: 1.875rem;
+     line-height: 3.35rem;
      text-align: center;
+     margin-top: 0;
 }
 h4 {
     font-family: "ClearSansBold", sans-serif;
@@ -40,7 +41,6 @@ header {
     align-items: center;
     background-color: #ddae81;
     align-items: center;
-    position: relative;
 }
 .logo {
     width: 11%;
@@ -49,11 +49,10 @@ header {
     list-style: none;
     display: inline-block;
     padding: 0 0.5rem;
-
+    position: relative;
 }
 .main-link {
     color: #e2dfdd;
-    font-size: 1.125rem;
     line-height: 1.5rem;
     font-family: "ClearSansBold", sans-serif;
 }
@@ -64,6 +63,7 @@ header {
     justify-content: space-around;
     align-items: center;
 }
+
 [type="checkbox"], label {
 	  display: none;
 }
@@ -76,6 +76,7 @@ label {
     right: 87px;
     top: 35px;
 }
+
 label:after{
     content:'';
     display: block;
@@ -92,6 +93,9 @@ label:after{
     background-color: rgb(56%, 78%, 17%, 0.5);
     width: 90%;
 }
+
+
+
 .social {
     font-size: 0;
     display: flex;
@@ -165,10 +169,39 @@ label:after{
     align-self: stretch;
 }
 /*-----------------------------MAIN----------------------*/
+#aboutus {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+@media screen and (max-width:41.250em) {
+    #aboutus {
+        flex-direction: column;
+        }
 
-.text-block, .photo-block {
+}
+.text-block  {
     width: 39.375%;
  }
+.text-block .avatar {
+    text-align: center;
+}
+ .avatar img {
+    border-radius: 50%;
+    width: 6.25rem;
+    height: 6.25rem;
+
+ }
+ .photo-block {
+     max-width: 39.375%;
+     align-self: center;
+     align-content: space-between;
+ }
+ .photo-block img  {
+     width: 48%;
+ }
+
 
 #assortment {
     display: flex;
@@ -188,7 +221,9 @@ label:after{
     width: 36.25rem;
     background-color: #d5d2d0;
 }
-
+.product-img {
+    width: 100%;
+}
 .about-product {
     display: flex;
     flex-direction: column;
@@ -285,13 +320,13 @@ label:after{
 }
 
 @media screen and (max-width: 880px) {
-    #aboutus {
+    /*#aboutus {
         display: flex;
         align-items: center;
         flex-direction: row;
         justify-content: space-around;
     }
-}
+}*/
 @media screen and (max-width: 768px) {
     .container {
         padding: 0;
@@ -303,10 +338,10 @@ label:after{
     .promo {
         text-align: center;
     }
-    #aboutus{
+    /*#aboutus{
         flex-wrap: wrap;
-        flex-direction: column;
-    }
+        /*flex-direction: column;*/
+    }*/
     .doc-wrap {
         display: none;
     }

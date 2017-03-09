@@ -13,9 +13,9 @@
             <div class="container">
                 <div class="header-nav">
                     <img src="#"class="logo"width="150"height="110"alt="Добрый мёд"/>
-                    <nav class="main-menu minify">
+                    <nav class="main-menu">
                         <input type="checkbox" id="nav"/>
-                        <label for="nav" class="gamburger"></label>
+                        <label for="nav" class="hamburger"></label>
                         <ul>
                             <li><a href="#" class="main-link">О нас</a></li>
                             <li><a href="#" class="main-link">Продукция</a></li>
@@ -42,26 +42,25 @@
                         <h2>Пчеловодство как искусство</h2>
                         <h4 class="annotation">Наша семья занимается пчеловождением несколько десятков лет. </h4>
                         <p>Алтай - это наша Родина! Это одно из красивейших мест на Земле. Его красота выражена не только в синеве голубого неба, яркости светящего над головой солнца, величественности гор и просторе степей, но и красоте человеческих душ и пылкости сердец всех тех, кто здесь живет! Мы такие разные, но у нас есть одно общее - </p>
-                        <p>Хозяйка пасеки</p>
                         <div class="avatar">
-                            <em>Татьяна</em>
+                            <p>Хозяйка пасеки</p>
                             <img src="" alt=""/>
-                            <em>Ганова-Поликарпова</em>
+                            <p>Татьяна Ганова-Поликарпова</p>
                         </div>
                         <q>Некая цитата</q>
                     </article>
                     <article class="photo-block">
-                        <img src="" alt=""width=""height="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
+                        <img src="img/photo1.jpg" alt="">
+                        <img src="img/photo2.jpg" alt="">
+                        <img src="img/photo3.jpg" alt="">
+                        <img src="img/photo4.jpg" alt="">
                         <div class="absolute-element on-photo"></div>
                     </article>
                 </section>
                 <section id="assortment">
                     <div class="wrap-block">
                         <div class="wrap-img">
-                            <img class="iproduct-img" src="" alt="">
+                            <img class="product-img" src="img/honey2.jpg" alt="">
                         </div>
                         <div class="about-product">
                             <h2 class="title-product">Мёд разнотравье</h2>
@@ -69,9 +68,9 @@
                             <p class="describe-product">Большой процент гречихи. Невероятно ароматный, благородной густой консистенции мёд. </p>
                             <div class="slider-doc">
                                 <button type="button" class="slide-btn previous-img"></button>
-                                <img src=""class"small-img" alt="">
-                                <img src=""class"small-img" alt="">
-                                <img src=""class"small-img" alt="">
+                                <img src="img/honey1.jpg"class"small-img" alt="">
+                                <img src="img/honey1.jpg"class"small-img" alt="">
+                                <img src="img/honey1.jpg"class"small-img" alt="">
                                 <button type="button" class="slide-btn forward-img"></button>
                             </div>
                             <div class="absolute-element"></div>
@@ -114,10 +113,10 @@
             </div>
         </main>
         <script type="text/javascript">
-            var gamburger = document.querySelector(".gamburger");
-            var minifyMenu = document.querySelector(".main-menu");
+            var hamburger = document.getElementsByTagName('label');
+            var minifyMenu = document.getElementsByTagName("ul");
 
-            gamburger.addEventListener("click", function(event) {
+            hamburger.addEventListener("click", function(event) {
                 minifyMenu.classList.add("minify");
             });
         </script>
