@@ -1,6 +1,4 @@
 body {
-    margin: 0;
-    max-width: 1600px;
     background-color: #fefefd;
     color: #56534c;
     font-family: "ClearSansRegular", sans-serif;
@@ -25,21 +23,33 @@ h4 {
     color: #a78365;
     font-size: 0.875rem
     line-height:  1.875rem;
-
 }
 a {
     text-decoration: none;
 }
 .container {
-    padding: 0 10.625%;
+    max-width: 77em;
+    width: 90%;
     margin: 0 auto;
+}
+@media screen and (min-width: 35em) {
+.container {
+    width: 98%;
+    }
+}
+@media screen and (max-width: 34.9em) {
+    .container {
+        width: 100%;
+    }
+
 }
 /*------------------------*HEADER------------------------------*/
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ddae81;
+    background: url(../img/honey2.jpg) center no-repeat;
+    background-size: cover;
     align-items: center;
 }
 .logo {
@@ -53,20 +63,26 @@ header {
 }
 .main-link {
     color: #e2dfdd;
+    padding: 0.5rem;
     line-height: 1.5rem;
     font-family: "ClearSansBold", sans-serif;
 }
 .main-link:hover{
-    color: #FF9100;
+    color: #e65100;
+    background-color:#ffb74d;
+    border-radius: 3px;
+
+}
+.main-link:active {
+    color: #1565c0;
 }
 .header-nav {
-    background-color: rgba(144, 132, 116, 1);
+    background-color: rgba(144, 132, 116, 0.5);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
-
 [type="checkbox"], label {
 	  display: none;
 }
@@ -199,8 +215,7 @@ label:after{
 @media screen and (max-width:41.250em) {
     #aboutus {
         flex-direction: column;
-        }
-
+    }
 }
 .text-block  {
     width: 39.375%;
@@ -219,37 +234,48 @@ label:after{
      font-size: 1.5rem;
  }
  .photo-block {
-     max-width: 39.375%;
-     align-self: center;
-     align-content: space-between;
+    margin-left: 2rem;
  }
  .photo-block img  {
-     width: 48%;
-     margin-top: 0.5rem;
+     width: 100%;
+     height: auto;
  }
+ .responce {
+     max-width: 100%;
+     display: inline-block;
+ }
+ @media screen and (min-width: 760px) {
+     .responce {
+         max-width: 24%;
+     }
 
+ }
+ @media screen and (min-width: 420px) {
+    .photo-block {
+        margin: 2rem;
+    }
+     .responce {
+         max-width: 48%;
+     }
 
+ }
 #assortment {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /*padding: 5.75rem 10rem;*/
 }
-
 .wrap-block {
     display: flex;
     justify-content: center;
     background-color: #ffffff;
-    height: 32rem;
+    height:auto;
 }
 .wrap-img  {
-    height: 30rem;
     width: 36.25rem;
-    background-color: #d5d2d0;
 }
 .product-img {
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 .about-product {
     display: flex;
@@ -257,6 +283,11 @@ label:after{
     align-items: center;
     padding: 1rem 1.5rem;
 }
+/*@media screen and (max-width: 762px) {
+    .about-product{
+        padding-bottom: 9rem;
+    }
+}*/
 .title-product {
     padding-bottom: 0.5rem;
 }
@@ -275,6 +306,12 @@ label:after{
     width: 6.25rem;
     height: 6.25rem;
 }
+@media screen and (max-width:416px) {
+    .slider-doc img {
+        width: 4.25rem;
+        height: 4.25rem;
+    }
+}
 /*-----------slider product---------*/
 .slide-btn {
     position: absolute;
@@ -282,7 +319,6 @@ label:after{
 .previous-btn {
     top: 50%;
     left: -10%;
-
 }
 .forward-btn {
     top:50%;
@@ -356,19 +392,6 @@ label:after{
 }
 /*----------MEDIA QUARIS------------------*/
 
-@media screen and (max-width: 920px) {
-
-
-}
-
-@media screen and (max-width: 880px) {
-    /*#aboutus {
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-}*/
 @media screen and (max-width: 768px) {
     .container {
         padding: 0;
@@ -380,31 +403,20 @@ label:after{
     .promo {
         text-align: center;
     }
-    /*#aboutus{
-        flex-wrap: wrap;
-        /*flex-direction: column;*/
-    }*/
     .doc-wrap {
         display: none;
     }
-
 }
 @media screen and (max-width: 650px) {
+
     .main-menu li {
         padding: 0 0.2rem;
     }
     .text-block {
         width: 90%;
     }
-    .photo-block {
-        align-items: center;
-        display: flex;
-        height: 12.625rem;
-        width: 90%;
-    }
-    .photo-block img {
-       width: 18.75rem;
-       height: 9.625rem;
+    #aboutus {
+        width: 100%;
     }
     #assortment{
          width: 100%;
@@ -417,9 +429,6 @@ label:after{
         flex-grow: 1;
         width: 96%;
     }
-    #quality{
-        margin-top: 22rem;
-    }
     #distributers {
         flex-direction: column;
     }
@@ -429,6 +438,7 @@ label:after{
 }
 @media screen and (max-width: 600px) {
     .header-nav {
+        width: 100%;
         justify-content: space-between;
     }
     label {
@@ -448,7 +458,4 @@ label:after{
         order: 0;
         margin-right: 4rem;
     }
-}
-@media only screen and (min-width : 320px) and (max-width : 479px) {
-
 }
