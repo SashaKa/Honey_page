@@ -134,7 +134,7 @@ label:after{
   position: relative;
   width: 40px;
   height: 23.09px;
-  background-color: #64C7CC;
+  background-color: #FF9100;
   margin: 11.55px 2px;
   position: relative;
 }
@@ -150,14 +150,15 @@ label:after{
 
 .hexagon:before {
   bottom: 100%;
-  border-bottom: 11.55px solid #64C7CC;
+  border-bottom: 11.55px solid #FF9100;
 }
 
 .hexagon:after {
   top: 100%;
   width: 0;
-  border-top: 11.55px solid #64C7CC;
+  border-top: 11.55px solid  #FF9100;
 }
+/*-----------HEADER PROMO----------*/
 .promo {
     width: 60%;
     display: flex;
@@ -166,24 +167,26 @@ label:after{
     align-items: baseline;
 }
 .product {
-        align-self: stretch;
+    align-self: stretch;
     padding: 0.5rem 0;
     font-weight: 800;
     border-radius: 5px;
     border: none;
-    background-color: #FF9100;
+    outline: none;
+    background: linear-gradient(to bottom, #FF9100 0%, #FF6D00 100%);
     color: #424242;
-    box-shadow: 2px -2px #FF6D00;
+    box-shadow: 2px 2px 3px #FF6D00;
 }
 .product:hover{
-    background-color: #FF6D00;
-    color: #424242;
-    box-shadow: -2px 2px #BDBDBD;
+    background: linear-gradient(to bottom, #FF6D00 0%,#FF9100 100%);
+    color: #e65100;
+    box-shadow: 2px 2px 3px #FF6D00;
 }
 .product:active{
-    background-color: #BDBDBD;
-    color: #FF9100;
-    box-shadow: 2px -2px #424242;
+    background: linear-gradient(to bottom, #616161 0%,#e0e0e0 100%);
+    color: #424242;
+    outline: none;
+    box-shadow: 2px 2px 3px #424242;
 }
 /*-----------------------------MAIN----------------------*/
 #aboutus {
@@ -211,6 +214,10 @@ label:after{
     height: 6.25rem;
 
  }
+ .avatar q {
+     font-style: italic;
+     font-size: 1.5rem;
+ }
  .photo-block {
      max-width: 39.375%;
      align-self: center;
@@ -218,6 +225,7 @@ label:after{
  }
  .photo-block img  {
      width: 48%;
+     margin-top: 0.5rem;
  }
 
 
