@@ -23,6 +23,7 @@ h4 {
     color: #a78365;
     font-size: 0.875rem
     line-height:  1.875rem;
+    text-align: center;
 }
 a {
     text-decoration: none;
@@ -48,10 +49,34 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: url(../img/honey2.jpg) center no-repeat;
+    overflow: hidden;
+    background: url(../img/honey2.jpg)  no-repeat;
+    background-position: 50% 15%;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
     background-size: cover;
-    align-items: center;
 }
+/*header::after {
+    content: "";
+    display: block;
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 1;
+   opacity: 0.6;
+   background-image:  url(../img/honey2.jpg);
+   background-repeat: no-repeat;
+   background-position: 50% 0;
+   -ms-background-size: cover;
+   -o-background-size: cover;
+   -moz-background-size: cover;
+   -webkit-background-size: cover;
+   background-size: cover;
+}*/
 .logo {
     width: 11%;
 }
@@ -77,7 +102,7 @@ header {
     color: #1565c0;
 }
 .header-nav {
-    background-color: rgba(144, 132, 116, 0.5);
+    background-color:rgba(97, 97, 97, 0.54);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -111,6 +136,7 @@ label:after{
     flex-direction: column;
     background-color: rgb(56%, 78%, 17%, 0.5);
     width: 90%;
+    height: auto;
 }
 .social {
     font-size: 0;
@@ -180,7 +206,12 @@ label:after{
     display: flex;
     flex-direction: column;
     margin: 5% 25%;
-    align-items: baseline;
+    align-items: center;;
+    color: #e2dfdd;
+    background-color: rgba(97, 97, 97, 0.39);
+}
+.promo h3 {
+    text-align: center;
 }
 .product {
     align-self: stretch;
@@ -195,7 +226,7 @@ label:after{
 }
 .product:hover{
     background: linear-gradient(to bottom, #FF6D00 0%,#FF9100 100%);
-    color: #e65100;
+    color: #e2dfdd;
     box-shadow: 2px 2px 3px #FF6D00;
 }
 .product:active{
@@ -211,6 +242,8 @@ label:after{
     justify-content: space-between;
     align-items: center;
     margin: 2rem 0;
+    background: url(../img/smoker.jpg) no-repeat;
+    background-position: 44% 20%;
 }
 @media screen and (max-width:41.250em) {
     #aboutus {
@@ -219,6 +252,10 @@ label:after{
 }
 .text-block  {
     width: 39.375%;
+    margin-left: 2rem;
+    background-color: rgba(97, 97, 97, 0.39);
+    padding: 3rem;
+    color: #e2dfdd;
  }
 .text-block .avatar {
     text-align: center;
@@ -236,9 +273,16 @@ label:after{
  .photo-block {
     margin-left: 2rem;
  }
+ @media screen and (min-width: 670px){
+
+ .photo-block {
+     margin-left: 10rem;
+     }
+ }
  .photo-block img  {
      width: 100%;
      height: auto;
+     border-radius: 5px;
  }
  .responce {
      max-width: 100%;
@@ -251,9 +295,6 @@ label:after{
 
  }
  @media screen and (min-width: 420px) {
-    .photo-block {
-        margin: 2rem;
-    }
      .responce {
          max-width: 48%;
      }
@@ -282,12 +323,10 @@ label:after{
     flex-direction: column;
     align-items: center;
     padding: 1rem 1.5rem;
+    background-color: rgba(255, 198, 80, 0.48);
 }
-/*@media screen and (max-width: 762px) {
-    .about-product{
-        padding-bottom: 9rem;
-    }
-}*/
+}
+
 .title-product {
     padding-bottom: 0.5rem;
 }
