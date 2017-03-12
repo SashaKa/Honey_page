@@ -153,7 +153,7 @@ label:after{
     background-color: transparent;
 }
 /*-----------Social-icons-hexagon--------------------*/
-.hexagon {
+.hexagon-social {
   position: relative;
   width: 40px;
   height: 23.09px;
@@ -162,8 +162,8 @@ label:after{
   position: relative;
 }
 
-.hexagon:before,
-.hexagon:after {
+.hexagon-social:before,
+.hexagon-social:after {
   content: "";
   position: absolute;
   width: 0;
@@ -171,12 +171,12 @@ label:after{
   border-right: 20px solid transparent;
 }
 
-.hexagon:before {
+.hexagon-social:before {
   bottom: 100%;
   border-bottom: 11.55px solid #FF9100;
 }
 
-.hexagon:after {
+.hexagon-social:after {
   top: 100%;
   width: 0;
   border-top: 11.55px solid  #FF9100;
@@ -221,9 +221,16 @@ label:after{
 #aboutus {
     display: flex;
     background: url(../img/smoker.jpg) no-repeat;
-    background-position: 44% 20%;
+    background-position: 52% 46%;
     justify-content: space-around;
     align-items: center;
+    color: rgba(97, 97, 97, 0.39);
+}
+@media screen and (max-width: 760px) {
+    #aboutus {
+        flex-direction: column;
+    }
+
 }
 .text-block {
     display: flex;
@@ -232,6 +239,21 @@ label:after{
     background-color: rgba(97, 97, 97, 0.39);
     padding: 3rem;
     color: #e2dfdd;
+ }
+ @media screen and (max-width: 760px) {
+     .text-block {
+         max-width: 95%;
+     }
+ }
+ .text-block p {
+    color: rgb(20, 30, 3);
+    font-size: 1rem;
+    font-weight: 500;
+ }
+ .text-block .annotation {
+    color: #e65100;
+    font-size: 1.2rem;
+    font-weight: 800;
  }
 .text-block .avatar {
     text-align: center;
@@ -250,10 +272,9 @@ label:after{
     margin-left: 2rem;
     max-width: 46%;
  }
- @media screen and (min-width: 670px){
-
- .photo-block {
-     /*margin-left: 10rem;*/
+ @media screen and (max-width: 760px) {
+     .photo-block {
+     max-width: 95%;
      }
  }
  .photo-block img  {
@@ -275,50 +296,335 @@ label:after{
      .responce {
          max-width: 48%;
      }
-
  }
 #assortment {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background: url(../img/Honey-bees-in-a-hive.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+
 }
 .wrap-block {
     display: flex;
     justify-content: center;
-    background-color: #ffffff;
     height:auto;
+
 }
 .wrap-img  {
     width: 36.25rem;
+
 }
-.product-img {
-    width: 100%;
+/*.product-img {
+    width: 78%;
     height: auto;
+    border-radius: 50%;
+}*/
+
+.hexagon-img-product {
+  position: relative;
+  width: 570px;
+  height: 329.09px;
+  margin: 164.54px 0;
+  background-image: url(../img/honey1.jpg);
+  background-size: auto 658.1793px;
+  background-position: center;
+}
+
+.hexTop,
+.hexBottom {
+  position: absolute;
+  z-index: 1;
+  width: 403.05px;
+  height: 403.05px;
+  overflow: hidden;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background: inherit;
+  left: 83.47px;
+}
+
+/*counter transform the bg image on the caps*/
+.hexTop:after,
+.hexBottom:after {
+  content: "";
+  position: absolute;
+  width: 570.0000px;
+  height: 329.0896534380867px;
+  -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-164.5448px);
+  -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-164.5448px);
+  transform:          rotate(45deg) scaleY(1.7321) translateY(-164.5448px);
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  background: inherit;
+}
+
+.hexTop {
+  top: -201.5254px;
+}
+
+.hexTop:after {
+  background-position: center top;
+}
+
+.hexBottom {
+  bottom: -201.5254px;
+}
+
+.hexBottom:after {
+  background-position: center bottom;
+}
+
+.hexagon:after {
+  content: "";
+  position: absolute;
+  top: 0.0000px;
+  left: 0;
+  width: 570.0000px;
+  height: 329.0897px;
+  z-index: 2;
+  background: inherit;
 }
 .about-product {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1rem 1.5rem;
-    background-color: rgba(255, 198, 80, 0.48);
+    background-color: rgba(97, 97, 97, 0.48);
 }
-}
-
 .title-product {
     padding-bottom: 0.5rem;
+    color: #2d2b26;
 }
 .annotation-product {
     margin-top: 0;
+    color: #e0e0e0;
+    font-size: 1rem;
 }
 .describe-product {
     text-align: center;
+    color: #e0e0e0;
 }
 .slider-doc {
+    display: flex;
     align-self: center;
     margin-top: auto;
     position: relative;
 }
+/*---------slider img hexagon--------*/
+.hexagon1 {
+  position: relative;
+  width: 100px;
+  height: 57.74px;
+  margin: 28.87px 0;
+  background-image: url(../img/honey1.jpg);
+  background-size: auto 115.4701px;
+  background-position: center;
+}
+.hexagon2 {
+  position: relative;
+  width: 100px;
+  height: 57.74px;
+  margin: 28.87px 0;
+  background-image: url(../img/honey1.jpg);
+  background-size: auto 115.4701px;
+  background-position: center;
+}
+.hexTop1,
+.hexBottom1 {
+  position: absolute;
+  z-index: 1;
+  width: 70.71px;
+  height: 70.71px;
+  overflow: hidden;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background: inherit;
+  left: 14.64px;
+}
+
+/*counter transform the bg image on the caps*/
+.hexTop1:after,
+.hexBottom1:after {
+  content: "";
+  position: absolute;
+  width: 100.0000px;
+  height: 57.73502691896258px;
+  -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-28.8675px);
+  -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-28.8675px);
+  transform:          rotate(45deg) scaleY(1.7321) translateY(-28.8675px);
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  background: inherit;
+}
+
+.hexTop1 {
+  top: -35.3553px;
+}
+
+.hexTop1:after {
+  background-position: center top;
+}
+
+.hexBottom1 {
+  bottom: -35.3553px;
+}
+
+.hexBottom1:after {
+  background-position: center bottom;
+}
+
+.hexagon1:after {
+  content: "";
+  position: absolute;
+  top: 0.0000px;
+  left: 0;
+  width: 100.0000px;
+  height: 57.7350px;
+  z-index: 2;
+  background: inherit;
+}
+.hexagon2 {
+  position: relative;
+  width: 100px;
+  height: 57.74px;
+  margin: 28.87px 0;
+  background-image: url(../img/honey1.jpg);
+  background-size: auto 115.4701px;
+  background-position: center;
+}
+
+
+.hexTop2,
+.hexBottom2 {
+  position: absolute;
+  z-index: 1;
+  width: 70.71px;
+  height: 70.71px;
+  overflow: hidden;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background: inherit;
+  left: 14.64px;
+}
+
+/*counter transform the bg image on the caps*/
+.hexTop2:after,
+.hexBottom2:after {
+  content: "";
+  position: absolute;
+  width: 100.0000px;
+  height: 57.73502691896258px;
+  -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-28.8675px);
+  -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-28.8675px);
+  transform:          rotate(45deg) scaleY(1.7321) translateY(-28.8675px);
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  background: inherit;
+}
+
+.hexTop2 {
+  top: -35.3553px;
+}
+
+.hexTop2:after {
+  background-position: center top;
+}
+
+.hexBottom2 {
+  bottom: -35.3553px;
+}
+
+.hexBottom2:after {
+  background-position: center bottom;
+}
+
+.hexagon2:after {
+  content: "";
+  position: absolute;
+  top: 0.0000px;
+  left: 0;
+  width: 100.0000px;
+  height: 57.7350px;
+  z-index: 2;
+  background: inherit;
+}
+.hexagon3 {
+  position: relative;
+  width: 100px;
+  height: 57.74px;
+  margin: 28.87px 0;
+  background-image: url(../img/honey1.jpg);
+  background-size: auto 115.4701px;
+  background-position: center;
+}
+
+
+.hexTop3,
+.hexBottom3 {
+  position: absolute;
+  z-index: 1;
+  width: 70.71px;
+  height: 70.71px;
+  overflow: hidden;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background: inherit;
+  left: 14.64px;
+}
+
+/*counter transform the bg image on the caps*/
+.hexTop3:after,
+.hexBottom3:after {
+  content: "";
+  position: absolute;
+  width: 100.0000px;
+  height: 57.73502691896258px;
+  -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-28.8675px);
+  -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-28.8675px);
+  transform:          rotate(45deg) scaleY(1.7321) translateY(-28.8675px);
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  background: inherit;
+}
+
+.hexTop3 {
+  top: -35.3553px;
+}
+
+.hexTop3:after {
+  background-position: center top;
+}
+
+.hexBottom3 {
+  bottom: -35.3553px;
+}
+
+.hexBottom3:after {
+  background-position: center bottom;
+}
+
+.hexagon3:after {
+  content: "";
+  position: absolute;
+  top: 0.0000px;
+  left: 0;
+  width: 100.0000px;
+  height: 57.7350px;
+  z-index: 2;
+  background: inherit;
+}
 .slider-doc img {
+
     width: 6.25rem;
     height: 6.25rem;
 }
