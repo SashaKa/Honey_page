@@ -142,12 +142,12 @@ label:after{
     background-position: -5px -206px;
 }
 .social .social-btn-fb {
-    top: -11px;
+    top: -5px;
     left: 10px;
-    background-position: -8px -82px;
+    background-position: -8px -85px;
 }
 .social .social-btn-fb:hover {
-    background-position: -8px -21px;
+    background-position: -8px -28px;
 }
 .social-btn {
     background-color: transparent;
@@ -157,7 +157,7 @@ label:after{
   position: relative;
   width: 40px;
   height: 23.09px;
-  background-color: #FF9100;
+  background-color: rgba(255, 204, 0, 0.91);;
   margin: 11.55px 2px;
   position: relative;
 }
@@ -173,13 +173,13 @@ label:after{
 
 .hexagon-social:before {
   bottom: 100%;
-  border-bottom: 11.55px solid #FF9100;
+  border-bottom: 11.55px solid rgba(255, 204, 0, 0.91);;
 }
 
 .hexagon-social:after {
   top: 100%;
   width: 0;
-  border-top: 11.55px solid  #FF9100;
+  border-top: 11.55px solid  rgba(255, 204, 0, 0.91);;
 }
 /*-----------HEADER PROMO----------*/
 .promo {
@@ -197,17 +197,17 @@ label:after{
 .product {
     align-self: center;
     margin-bottom: 1rem;
-    padding: 0.5rem 0;
+    padding: 0.5rem;
     font-weight: 800;
     border-radius: 5px;
     border: none;
     outline: none;
-    background: linear-gradient(to bottom, #FF9100 0%, #FF6D00 100%);
+    background: linear-gradient(to bottom, rgba(255, 204, 0, 0.91) 0%, #FF6D00 100%);
     color: #424242;
     box-shadow: 2px 2px 3px #FF6D00;
 }
 .product:hover{
-    background: linear-gradient(to bottom, #FF6D00 0%,#FF9100 100%);
+    background: linear-gradient(to bottom, #FF6D00 0%,rgba(255, 204, 0, 0.91) 100%);
     color: #e2dfdd;
     box-shadow: 2px 2px 3px #FF6D00;
 }
@@ -235,9 +235,10 @@ label:after{
 .text-block {
     display: flex;
     flex-direction: column;
-    max-width: 33%;
-    background-color: rgba(97, 97, 97, 0.39);
-    padding: 3rem;
+    flex: 1 1 36%;
+    margin: 0 3rem;
+    background-color: rgba(223, 169, 43, 0.68);
+    padding: 0.1rem 1.2rem;
     color: #e2dfdd;
  }
  @media screen and (max-width: 760px) {
@@ -251,7 +252,7 @@ label:after{
     font-weight: 500;
  }
  .text-block .annotation {
-    color: #e65100;
+    color: rgb(46, 20, 1);
     font-size: 1.2rem;
     font-weight: 800;
  }
@@ -301,7 +302,7 @@ label:after{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background: url(../img/Honey-bees-in-a-hive.jpg) no-repeat;
+    background: url(../img/Burlap.jpg) no-repeat;
     background-position: center;
     background-size: cover;
 
@@ -313,100 +314,41 @@ label:after{
 
 }
 .wrap-img  {
-    width: 36.25rem;
-
+    flex: 1 1 37%;
+    align-self: center;
 }
-/*.product-img {
-    width: 78%;
+.product-img {
+    width: 93%;
+    margin: 0 3rem;
     height: auto;
-    border-radius: 50%;
-}*/
-
-.hexagon-img-product {
-  position: relative;
-  width: 570px;
-  height: 329.09px;
-  margin: 164.54px 0;
-  background-image: url(../img/honey1.jpg);
-  background-size: auto 658.1793px;
-  background-position: center;
-}
-
-.hexTop,
-.hexBottom {
-  position: absolute;
-  z-index: 1;
-  width: 403.05px;
-  height: 403.05px;
-  overflow: hidden;
-  -webkit-transform: scaleY(0.5774) rotate(-45deg);
-  -ms-transform: scaleY(0.5774) rotate(-45deg);
-  transform: scaleY(0.5774) rotate(-45deg);
-  background: inherit;
-  left: 83.47px;
-}
-
-/*counter transform the bg image on the caps*/
-.hexTop:after,
-.hexBottom:after {
-  content: "";
-  position: absolute;
-  width: 570.0000px;
-  height: 329.0896534380867px;
-  -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-164.5448px);
-  -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-164.5448px);
-  transform:          rotate(45deg) scaleY(1.7321) translateY(-164.5448px);
-  -webkit-transform-origin: 0 0;
-  -ms-transform-origin: 0 0;
-  transform-origin: 0 0;
-  background: inherit;
-}
-
-.hexTop {
-  top: -201.5254px;
-}
-
-.hexTop:after {
-  background-position: center top;
-}
-
-.hexBottom {
-  bottom: -201.5254px;
-}
-
-.hexBottom:after {
-  background-position: center bottom;
-}
-
-.hexagon:after {
-  content: "";
-  position: absolute;
-  top: 0.0000px;
-  left: 0;
-  width: 570.0000px;
-  height: 329.0897px;
-  z-index: 2;
-  background: inherit;
 }
 .about-product {
     display: flex;
+    flex: 1 1 34%;
     flex-direction: column;
+    margin: 0 2rem;
     align-items: center;
-    padding: 1rem 1.5rem;
-    background-color: rgba(97, 97, 97, 0.48);
+    padding: 1rem 0.5rem;
+    background-color: rgba(176, 139, 100, 0.72);
 }
 .title-product {
     padding-bottom: 0.5rem;
-    color: #2d2b26;
+    color: rgb(54, 56, 47);
 }
 .annotation-product {
     margin-top: 0;
-    color: #e0e0e0;
-    font-size: 1rem;
+    color: rgb(57, 20, 1);
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1.6rem;
 }
 .describe-product {
     text-align: center;
-    color: #e0e0e0;
+    display: block;
+    max-width: 40%;
+    font-size: 1.2rem;
+    color: rgb(20, 30, 3);
 }
 .slider-doc {
     display: flex;
@@ -419,7 +361,7 @@ label:after{
   position: relative;
   width: 100px;
   height: 57.74px;
-  margin: 28.87px 0;
+  margin: 28.87px 10px;
   background-image: url(../img/honey1.jpg);
   background-size: auto 115.4701px;
   background-position: center;
@@ -428,7 +370,7 @@ label:after{
   position: relative;
   width: 100px;
   height: 57.74px;
-  margin: 28.87px 0;
+  margin: 28.87px 10px;
   background-image: url(../img/honey1.jpg);
   background-size: auto 115.4701px;
   background-position: center;
@@ -446,8 +388,6 @@ label:after{
   background: inherit;
   left: 14.64px;
 }
-
-/*counter transform the bg image on the caps*/
 .hexTop1:after,
 .hexBottom1:after {
   content: "";
@@ -462,23 +402,18 @@ label:after{
   transform-origin: 0 0;
   background: inherit;
 }
-
 .hexTop1 {
   top: -35.3553px;
 }
-
 .hexTop1:after {
   background-position: center top;
 }
-
 .hexBottom1 {
   bottom: -35.3553px;
 }
-
 .hexBottom1:after {
   background-position: center bottom;
 }
-
 .hexagon1:after {
   content: "";
   position: absolute;
@@ -498,8 +433,6 @@ label:after{
   background-size: auto 115.4701px;
   background-position: center;
 }
-
-
 .hexTop2,
 .hexBottom2 {
   position: absolute;
@@ -513,8 +446,6 @@ label:after{
   background: inherit;
   left: 14.64px;
 }
-
-/*counter transform the bg image on the caps*/
 .hexTop2:after,
 .hexBottom2:after {
   content: "";
@@ -529,11 +460,9 @@ label:after{
   transform-origin: 0 0;
   background: inherit;
 }
-
 .hexTop2 {
   top: -35.3553px;
 }
-
 .hexTop2:after {
   background-position: center top;
 }
@@ -560,7 +489,7 @@ label:after{
   position: relative;
   width: 100px;
   height: 57.74px;
-  margin: 28.87px 0;
+  margin: 28.87px 10px;
   background-image: url(../img/honey1.jpg);
   background-size: auto 115.4701px;
   background-position: center;
@@ -580,8 +509,6 @@ label:after{
   background: inherit;
   left: 14.64px;
 }
-
-/*counter transform the bg image on the caps*/
 .hexTop3:after,
 .hexBottom3:after {
   content: "";
@@ -654,15 +581,27 @@ label:after{
     color: #ffffff;
     padding: 3% 0.5%;
     width: 100%;
+    background: url(../img/wood.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .wrap-doc-info {
-        width: 39.635%;
+        flex: 1 1 30%;
+        margin: 0.9rem;
         text-align: center;
+        background-color: rgba(130, 100, 77, 0.72);
+}
+.wrap-doc-info .annotation {
+    color: #f2af02;
+    font-size: 1.2rem;
+    font-weight: 800;
+
 }
 .doc-wrap {
-    width: 27.375rem;
-    height: 37.5rem;
-    background-color: #f3f1e9;
+    flex: 1 2 30%;
+    margin: 0.9rem 2rem;
+    height: auto;
+    background-color: rgba(243, 241, 233, 0.77);
 }
 
 .name-document {
@@ -686,15 +625,17 @@ label:after{
 }
 #distributers{
     background-color:#e3dfd6;
+    background: url(../img/combback.jpg) no-repeat center;
+    background-size: cover;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
     width: 100%;
-    padding: 3% 0.5%;
-
 }
 .wrap-list {
+    background-color: rgba(81, 88, 102, 0.59);
     display: flex;
+    flex: 1 1 40%;
+    margin: 0.9rem;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-around;
@@ -702,18 +643,37 @@ label:after{
 }
 .where-buy {
     text-align: center;
+    color: rgb(255, 225, 73);
+}
+.distributer-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+.distributer-card h4 {
+    color: #ffc650;
+    line-height: 0.1rem;
+    font-weight: 600;
+}
+.distributer-card p {
+    font-size: 1.2rem;
+    color: #fefefd;
+    line-height: 1.8rem;
 }
 .city-avatar {
     width: 6.25rem;
     height: 6.25rem;
 }
 .map {
-    width: 42.8125%;
-    height: 25.625rem;
-    border: 0.625rem solid #ffffff;
+    flex: 1 1 42.8125%;
 }
-/*----------MEDIA QUARIS------------------*/
-
+/*----------MEDIA QUARIES------------------*/
+@media screen and (max-width: 840px) {
+    .map {
+        width: 96%;
+    }
+}
 @media screen and (max-width: 768px) {
     .container {
         padding: 0;
@@ -751,11 +711,11 @@ label:after{
         flex-grow: 1;
         width: 96%;
     }
+    .product-img {
+        margin: 0 1rem;
+    }
     #distributers {
         flex-direction: column;
-    }
-    .map {
-        width: 96%;
     }
 }
 @media screen and (max-width: 600px) {
