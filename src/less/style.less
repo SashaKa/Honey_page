@@ -13,6 +13,12 @@
      -moz-text-shadow: @arguments;
           text-shadow: @arguments;
 }
+.gradient-diagonal {
+    background: linear-gradient(45deg, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(246,246,246,1) 100%);
+}
+.gradient {
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%);
+}
 
 // styles
 * {
@@ -31,6 +37,10 @@ p {
     font-size: 0.875rem;
     line-height: 1.5rem;
     margin: 1rem 1.5rem;
+}
+h1 {
+    font-size: 2em;
+    margin: 0.67em 3.9rem;
 }
 h2 {
      font-family: 'Open Sans', sans-serif;
@@ -138,27 +148,28 @@ header {
 }
 .mobile-menu {
     display: none;
+    .soft-box;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     top: 2rem;
-    left: -20rem;
+    left: -15rem;
     background-color: rgba(97, 97, 97, 0.93);
-    width: 23rem;
+    width: 18rem;
     position: absolute;
     height: auto;
-    -webkit-animation: showme 1s;
-            animation: showme 1s;
+    -webkit-animation: showme 0.7s;
+            animation: showme 0.7s;
 }
 .mobile-menu-on {
     display: block;
 }
 @-webkit-keyframes showme {
-    50% {-webkit-transform: translateX(50%);transform: translateX(50%)}
+    50% {-webkit-transform: translateX(25%);transform: translateX(25%)}
 }
 @keyframes showme {
-    50% {-webkit-transform: translateX(50%);transform: translateX(50%)}
+    50% {-webkit-transform: translateX(15%);transform: translateX(15%)}
 
 }
 .mobile-menu li {
@@ -166,16 +177,25 @@ header {
     margin: 2rem 0.9rem;
 }
 .mobile-link {
+    position: relative;
     text-decoration: none;
     color: #e2dfdd;
-    padding: 1rem;
-    line-height: 1.5rem;
+    line-height: 1.2rem;
+    font-size: 1rem;
 }
-.mobile-link:hover{
-    color: #e65100;
-    background-color:#f9c40a;
-    border-radius: 2px;
-
+.mobile-link::after{
+    display: none;
+    .soft-box;
+    position: absolute;
+    content: "";
+    width: 90%;
+    height: 2px;
+    background-color: #fff;
+    bottom: -3px;
+    left:5px;
+}
+.mobile-link:hover::after {
+    display: block;
 }
 
 /*---------------main-menu---------------*/
@@ -247,9 +267,12 @@ header {
     color: #1565c0;
 }
 .main-menu li:nth-child(2):hover .sub-nav {
-    display: block;
+    visibility: visible;
     color: #333333;
+    transform: translateY(0%);
+    transition-delay: 0s, 0s, 0.3s;
 }
+
 
 /*---------sub-menu-------------*/
 .sub-nav {
@@ -263,8 +286,9 @@ header {
     display: inline-block;
     min-width: 7rem;
     z-index: 2;
-    display: none;
+    visibility: hidden;
     position: absolute;
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
 
 }
 .sub-link {
@@ -289,15 +313,15 @@ header {
     position: relative;
     display: inline-block;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1032px) {
     .hexagon-wrapper{
         margin: 10px;}
 }
-@media screen and (max-width: 725px) {
+@media screen and (max-width: 962px) {
     .hexagon-wrapper{
-        margin: 5px;}
+        margin: 2px;}
 }
-@media screen and (max-width: 790px) {
+@media screen and (max-width: 890px) {
     .hexagon-wrapper{
         width: 45px;
         height: 45px;
@@ -335,16 +359,18 @@ header {
   transform: rotate(-60deg);
 }
 .hexagon-wrapper .fa-facebook,
-.hexagon-wrapper .fa-vk {
+.hexagon-wrapper .fa-vk,
+.hexagon-wrapper .fa-odnoklassniki {
     position: absolute;
     z-index: 2;
     font-size: 3rem;
     color: #fff;
     .text-shadow;
 }
-@media screen and (max-width: 790px){
+@media screen and (max-width: 890px){
     .hexagon-wrapper .fa-facebook,
-    .hexagon-wrapper .fa-vk{
+    .hexagon-wrapper .fa-vk,
+    .hexagon-wrapper .fa-odnoklassniki {
         font-size: 1.8rem;
     }
 }
@@ -357,6 +383,11 @@ header {
     left: 33%;
 
 }
+.fa-odnoklassniki{
+    top: 16%;
+    left: 28%;
+    }
+
 
 /*-----------HEADER PROMO----------*/
 .promo {
@@ -368,7 +399,7 @@ header {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin: 20% 23%;
+    margin: 12% 23%;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;;
@@ -473,8 +504,9 @@ header {
      font-size: 1.5rem;
  }
  .photo-block {
-    margin-left: 2rem;
+    padding: 0.5rem;
     max-width: 46%;
+    .soft-box;
  }
  @media screen and (max-width: 760px) {
      .photo-block {
@@ -510,10 +542,6 @@ header {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    /*background: url(../img/wax.jpg) no-repeat;
-    background-position: center;
-    background-size: cover;*/
-
 }
 .wrap-block {
     display: -webkit-box;
@@ -532,11 +560,15 @@ header {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+
+        
+
 }
 .product-img {
     width: 93%;
-    margin: 0 3rem;
+    margin: 1rem;
     height: auto;
+    .soft-box;
 }
 .about-product {
     display: -webkit-box;
@@ -555,6 +587,7 @@ header {
         -ms-flex-align: center;
             align-items: center;
     padding: 1rem 0.5rem;
+    .gradient;
 }
 .title-product {
     padding-bottom: 0.5rem;
@@ -618,6 +651,8 @@ header {
         margin: 0.9rem;
         text-align: center;
         background-color: rgba(255, 255, 255, 0.38);
+        .soft-box;
+        position: relative;
 }
 .wrap-doc-info .annotation {
     color: #263947;
@@ -632,6 +667,22 @@ header {
     margin: 0.9rem 2rem;
     height: auto;
     background-color: rgba(243, 241, 233, 0.77);
+    .soft-box;
+}
+
+@media screen and (max-width:1024px){
+    .doc-wrap {
+        display: none;
+    }
+
+}
+.document-show {
+    display: block;
+    position: absolute;
+    background-color: rgba(243, 241, 233, 0.77);
+    .soft-box;
+    width: 10%;
+    height: 10%;
 }
 
 .name-document {
@@ -653,6 +704,10 @@ header {
 .name-document:active {
     color: rgba(255,246,213,.4);
 
+}
+.about-document {
+    .text-shadow;
+    font-size: 1rem;
 }
 #distributers{
     background-color:#e3dfd6;
@@ -685,6 +740,7 @@ header {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+            .soft-box;
 }
 .where-buy {
     text-align: center;
@@ -759,13 +815,25 @@ footer p {
     color: #ffffff;
 }
 footer .logo {
-    flex: 1 1 30%;
+    flex: 1 1 48%;
     display: flex;
     justify-content: center;
 }
-
+footer i {
+    font-size: 1.5rem;
+    padding-right: 1rem;
+}
 /*----------MEDIA QUARIES------------------*/
+@media screen and (max-width:1024px) {
+    #distributers {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+}
 @media screen and (max-width: 840px) {
+
     .map {
         width: 96%;
     }
@@ -781,14 +849,17 @@ footer .logo {
     .promo {
         text-align: center;
         width: 90%;
-        margin: 1rem 2rem;
+        margin: 8rem 2rem;
     }
-    .doc-wrap {
-        display: none;
+    .wrap-block {
+        flex-direction: column;
     }
+    .wrap-img{
+        order:2;
+    }
+
 }
 @media screen and (max-width: 650px) {
-
     .main-menu li {
         padding: 0 0.2rem;
     }
@@ -811,16 +882,26 @@ footer .logo {
             -ms-flex-positive: 1;
                 flex-grow: 1;
         width: 96%;
+        order: 2;
     }
     .product-img {
         margin: 0 1rem;
     }
-    #distributers {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
+
+}
+@media screen and (max-width:632px) {
+    .header-nav {
+        flex-wrap: wrap;
+        justify-content: center;
     }
+    .logo {
+        width: 23%;
+        margin-left: 2rem;
+    }
+    .social {
+        order:-1;
+    }
+
 }
 @media screen and (min-width:320px) and (max-width: 600px) {
     body {
@@ -834,7 +915,7 @@ footer .logo {
         width: 100%;
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
-                justify-content: space-between;
+                justify-content: space-around;
     }
     .main-menu {
 		  display: none;
@@ -844,6 +925,7 @@ footer .logo {
             -ms-flex-order: 1;
                 order: 1;
         width: 25%;
+        margin: 0;
     }
     .social {
         -webkit-box-ordinal-group: 1;
@@ -861,5 +943,8 @@ footer .logo {
     }
     .text-block {
         margin: 0;
+    }
+    footer .container {
+        flex-direction: column;
     }
 }
