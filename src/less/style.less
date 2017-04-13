@@ -561,8 +561,6 @@ header {
         -ms-grid-row-align: center;
         align-self: center;
 
-        
-
 }
 .product-img {
     width: 93%;
@@ -676,16 +674,20 @@ header {
     }
 
 }
-.document-show {
-    display: block;
-    position: absolute;
-    background-color: rgba(243, 241, 233, 0.77);
+#attestate,
+#sertificate,
+#reward {
+    display: none;
     .soft-box;
-    width: 10%;
-    height: 10%;
+    width: 95%;
+}
+#btn-1,
+#btn-2,
+#btn-3 {
+  // display: none;
 }
 
-.name-document {
+label {
     font-size: 1.875rem;
     line-height: 1.875rem;
     font-family: 'Open Sans', sans-serif;
@@ -697,18 +699,23 @@ header {
     cursor: pointer;
     box-shadow: 2px 2px #21435e;
 }
-.name-document:hover {
+label:hover {
     color: #fefefd;
     background-color: rgba(0,0,0,.4);
 }
-.name-document:active {
+label:active {
     color: rgba(255,246,213,.4);
-
+}
+#btn-1::checked ~ .doc-wrap #attestate,
+#btn-2::checked ~ .doc-wrap #sertificate,
+#btn-3::checked ~  .doc-wrap #reward {
+    display: block;
 }
 .about-document {
     .text-shadow;
     font-size: 1rem;
 }
+
 #distributers{
     background-color:#e3dfd6;
     background: url(../img/combback.jpg) no-repeat center;
@@ -773,6 +780,10 @@ header {
 .city-avatar {
     width: 6.25rem;
     height: 6.25rem;
+}
+#distributers i {
+    font-size: 1rem;
+    padding-right: 1rem;
 }
 .map {
     -webkit-box-flex: 1;
