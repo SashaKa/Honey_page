@@ -1,8 +1,15 @@
 
 const hamburger = document.querySelector('.burger-menu')
 const mobileMenu = document.querySelector ('.mobile-menu')
-const docButton = document.querySelector ('.name-document')
-const docShow = document.querySelector ('.doc-wrap')
+const buttonOne = document.getElementById('btn-1')
+const buttonTwo = document.getElementById('btn-2')
+const buttonThree = document.getElementById('btn-3')
+const attestate = document.querySelector('.attestate')
+const sertificate = document.querySelector('.sertificate')
+const reward = document.querySelector('.reward')
+const showDocument = document.querySelector('.document-show')
+const closeBtn = document.querySelector('.close-btn')
+
 
 hamburger.addEventListener('click', () => {
     if (!hamburger.classList.contains('menu-on')) {
@@ -13,10 +20,21 @@ hamburger.addEventListener('click', () => {
         mobileMenu.classList.remove('mobile-menu-on')
     }
 })
-docButton.addEventListener('click', () => {
-    if(!docShow.classList.contains('document-show')) {
-        docShow.classList.add('document-show')
-    } else if (docShow.classList.contains('document-show')) {
-        docShow.classList.remove('document-show')
-    }
+buttonOne.addEventListener('click', () => {
+    attestate.classList.add('document-show')
+    })
+buttonTwo.addEventListener('click', () => {
+    sertificate.classList.add('document-show')
+})
+buttonThree.addEventListener('click', () => {
+    reward.classList.add('document-show')
+})
+closeBtn.addEventListener('click', () => {
+    attestate.classList.remove('document-show')
+})
+closeBtn.addEventListener('click', () => {
+    sertificate.classList.remove('document-show')
+})
+closeBtn.addEventListener('click', () => {
+    reward.classList.remove('document-show')
 })

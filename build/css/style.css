@@ -754,30 +754,25 @@ header {
 }
 .doc-wrap {
   -webkit-box-flex: 1;
-  -ms-flex: 1 2 30%;
-  -webkit-flex: 1 2 30%;
+  -ms-flex: 1 2 60%;
+  -webkit-flex: 1 2 60%;
   -moz-box-flex: 1;
-  flex: 1 2 30%;
+  flex: 1 2 60%;
   margin: 0.9rem 2rem;
   height: auto;
-  background-color: rgba(243, 241, 233, 0.77);
+  background-color: rgba(0, 0, 0, 0.54);
   border-radius: 5px;
   box-shadow: 7px 8px 14px -6px rgba(0, 0, 0, 0.64);
+  position: absolute;
 }
-@media screen and (max-width: 1024px) {
-  .doc-wrap {
-    display: none;
-  }
-}
-#attestate,
-#sertificate,
-#reward {
+.attestate,
+.sertificate,
+.reward {
   display: none;
-  border-radius: 5px;
-  box-shadow: 7px 8px 14px -6px rgba(0, 0, 0, 0.64);
   width: 95%;
+  padding: 1rem;
 }
-label {
+.name-document {
   font-size: 1.875rem;
   line-height: 1.875rem;
   font-family: 'Open Sans', sans-serif;
@@ -789,23 +784,36 @@ label {
   cursor: pointer;
   box-shadow: 2px 2px #21435e;
 }
-label:hover {
+.name-document:hover {
   color: #fefefd;
   background-color: rgba(0, 0, 0, 0.4);
 }
-label:active {
+.name-document:active {
   color: rgba(255, 246, 213, 0.4);
-}
-#btn-1::checked ~ .doc-wrap #attestate,
-#btn-2::checked ~ .doc-wrap #sertificate,
-#btn-3::checked ~ .doc-wrap #reward {
-  display: block;
 }
 .about-document {
   -webkit-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.64);
   -moz-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.64);
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.64);
   font-size: 1rem;
+}
+.document-show {
+  display: block;
+}
+.doc-wrap .fa-times {
+  cursor: pointer;
+  right: 1px;
+  top: 0;
+  position: absolute;
+  background-color: rgba(97, 97, 97, 0.39);
+  color: #fff;
+  padding: 0.5rem;
+  font-size: 2rem;
+  -webkit-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.64);
+  -moz-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.64);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.64);
+  border-radius: 5px;
+  box-shadow: 7px 8px 14px -6px rgba(0, 0, 0, 0.64);
 }
 #distributers {
   background-color: #e3dfd6;
