@@ -9,6 +9,8 @@ const sertificate = document.querySelector('.sertificate')
 const reward = document.querySelector('.reward')
 const showDocument = document.querySelector('.document-show')
 const closeBtn = document.querySelector('.close-btn')
+const closeBtn2 = document.querySelector('.close-btn2')
+const closeBtn3 = document.querySelector('.close-btn3')
 
 
 hamburger.addEventListener('click', () => {
@@ -32,9 +34,9 @@ buttonThree.addEventListener('click', () => {
 closeBtn.addEventListener('click', () => {
     attestate.classList.remove('document-show')
 })
-closeBtn.addEventListener('click', () => {
+closeBtn2.addEventListener('click', () => {
     sertificate.classList.remove('document-show')
 })
-closeBtn.addEventListener('click', () => {
+closeBtn3.addEventListener('click', () => {
     reward.classList.remove('document-show')
 })
