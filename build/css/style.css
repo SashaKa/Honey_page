@@ -265,6 +265,9 @@ header {
   font-size: 1.2rem;
   font-weight: 800;
   position: relative;
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 @media screen and (max-width: 720px) {
   .main-link {
@@ -424,8 +427,8 @@ header {
   }
 }
 .fa-vk {
-  top: 24%;
-  left: 22%;
+  top: 25%;
+  left: 20%;
 }
 .fa-facebook {
   top: 28%;
@@ -508,7 +511,6 @@ header {
   -moz-box-align: center;
   align-items: center;
   color: rgba(97, 97, 97, 0.39);
-  background: liner-gradient(to bottom, rgba(97, 97, 97, 0.39), #e29e19);
 }
 @media screen and (max-width: 760px) {
   #aboutus {
