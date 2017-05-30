@@ -1,1 +1,1 @@
-# Honey_page for family 
+HTML файл находится в корне папки Build.
