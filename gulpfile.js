@@ -1,39 +1,37 @@
-var gulp = require('gulp'),
-    gutil = require('gulp-util'),
-    plugins = require('gulp-load-plugins')({
-        rename: {
-            'gulp-live-server': 'serve'
-        }
-    });
+const gulp = require('gulp');
+const gutil = require('gulp-util');
+const plugins = require('gulp-load-plugins')();
 
-gulp.task('default', ['watch']);
-
-gulp.task('build-css', function () {
-    return gulp.src('src/less/*.less')
-        .pipe(plugins.plumber())
-        .pipe(plugins.less())
-        .on('error', function (err) {
-            gutil.log(err);
-            this.emit('end');
-        })
-        .pipe(plugins.autoprefixer({
-            browsers: [
-                    '> 1%',
-                    'last 2 versions',
-                    'firefox >= 4',
-                    'safari 7',
-                    'safari 8',
-                    'IE 8',
-                    'IE 9',
-                    'IE 10',
-                    'IE 11'
-                ],
-            cascade: false
-        }))
-        //.pipe(plugins.cssmin())
-        .pipe(gulp.dest('build/css')).on('error', gutil.log);
+gulp.task('default', () => {
+  gulp.watch('src/less/*.less', ['build-css-from-less']);
+  gulp.watch('build/*.html', ['validate-html']);
 });
 
-gulp.task('watch', function () {
-    gulp.watch('src/less/**/*.less', ['build-css']);
+gulp.task('build-css-from-less', () => {
+  return gulp
+    .src('src/less/*.less')
+    .pipe(plugins.plumber())
+    .pipe(plugins.less())
+    .on('error', (e) => {
+      gutil.log(e);
+      this.emit('end');
+    })
+    .pipe(
+      plugins.autoprefixer({
+        browsers: [
+          'last 2 versions',
+          'IE 10',
+          'IE 11'
+        ],
+        cascade: false
+      })
+    )
+    .pipe(gulp.dest('build/css'))
+    .on('error', gutil.log);
 });
+
+gulp.task('validate-html', () => {
+  return gulp.src("build/*.html")
+    .pipe(plugins.htmlhint())
+    .pipe(plugins.htmlhint.reporter())
+})

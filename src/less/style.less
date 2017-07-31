@@ -1,5 +1,9 @@
 // Less mixins
 
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=cyrillic');
+
+
 @honey:#e29e19;
 @dark:rgba(97, 97, 97, 0.39);
 .soft-box {
@@ -38,17 +42,18 @@ p {
     line-height: 1.5rem;
     margin: 1rem 1.5rem;
 }
-h1 {
+.header-text {
+    font-family: 'Lora', serif;
     font-size: 2em;
-    margin: 0.67em 1.9rem;
+    line-height: 2;
 }
 h2 {
      font-family: 'Open Sans', sans-serif;
-     font-size:3rem;
+     font-size: 3rem;
      line-height: 3.35rem;
      text-align: center;
      margin-top: 1.5rem;
-     .text-shadow;
+    //  .text-shadow;
 }
 h4 {
     font-family: 'Open Sans', sans-serif;
@@ -59,6 +64,7 @@ h4 {
     font-weight: 700;
 }
 a {
+    font-family: 'Open Sans', sans-serif;
     text-decoration: none;
 }
 .container {
@@ -68,7 +74,7 @@ a {
 }
 
 /*------------------------*HEADER------------------------------*/
-header {
+.header-box {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -80,7 +86,7 @@ header {
             align-items: center;
     overflow: hidden;
     background: url(../img/honey2.jpg)  no-repeat;
-    background-position: center;;
+    background-position: center;
     -ms-background-size: cover;
     background-size: cover;
 }
@@ -180,7 +186,7 @@ header {
     position: relative;
     text-decoration: none;
     color: #e2dfdd;
-    line-height: 1.2rem;
+    line-height: 1.5rem;
     font-size: 1rem;
 }
 .mobile-link::after{
@@ -229,22 +235,23 @@ header {
     .text-shadow;
     color: #fff;
     padding: 0.5rem;
-    line-height: 1.2rem;
+    line-height: 1.5rem;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.2rem;
-    font-weight: 800;
+    font-weight: 600;
     position: relative;
     transition: all .8s ease-in-out;
 }
 @media screen and (max-width:720px) {
     .main-link {
-        font-size: 1rem;
+        font-size: 1.2rem;
         padding: 0.1rem;
     }
 
 }
  .sub-link {
      color: #333;
+     line-height: 1.2;
      .text-shadow;
  }
 .main-link:hover{
@@ -396,7 +403,7 @@ header {
 
 /*-----------HEADER PROMO----------*/
 .promo {
-    width: 60%;
+    width: 48%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -404,7 +411,7 @@ header {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin: 12% 23%;
+    margin: 12% auto;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;;
@@ -413,9 +420,12 @@ header {
     .soft-box;
     .text-shadow;
 }
-.promo h3 {
+.promo__post-header {
     text-align: center;
-    margin: 3.5rem;
+    margin: 1.2rem;
+    width: 70%;
+    font-weight: 400;
+    line-height: 1.5;
 }
 .product-btn{
     -ms-flex-item-align: center;
@@ -428,10 +438,9 @@ header {
     line-height: 1.5rem;
     font-family: 'Open Sans', sans-serif;
     padding: 0.6rem 1.2rem;
-    padding-bottom: 0.7rem;
+    padding-bottom: 0.8rem;
     border-radius: 0.3rem;
     cursor: pointer;
-    border: 2px solid darken(@honey, 10%);
     box-shadow: inset 0 100px 0 0 @honey;
     color: #FFF;
 	-webkit-transition: all ease 0.8s;
@@ -486,31 +495,50 @@ header {
          max-width: 95%;
      }
  }
- .text-block p {
+ .text-block-content {
     color: rgb(20, 30, 3);
     font-size: 1rem;
     font-weight: 500;
+    width: 44%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    position: relative;
+
+    &:before, 
+    &:after {
+        position: absolute;
+        content: "";
+        width: 60px;
+        height: 60px;
+        background: url(../img/quotes.svg) no-repeat center;
+    }
+    &::before {
+        top: 0;
+        left: -87px;
+    }
+    &::after{
+        right: -97px;
+        bottom: 0;
+    }
  }
  .text-block .annotation {
     color: rgb(46, 20, 1);
     font-size: 1.2rem;
     font-weight: 800;
+    margin: 0 auto;
+    width: 30%;
  }
 .text-block .avatar {
     text-align: center;
     margin-bottom: 1.5rem;
 }
- .avatar img,
- .distributer-card img {
+ .aboutus-avatar {
     border-radius: 50%;
-    width: 6.25rem;
-    height: 6.25rem;
-
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
  }
- .avatar q {
-     font-style: italic;
-     font-size: 1.5rem;
- }
+ 
  .photo-block {
     padding: 0.5rem;
     max-width: 46%;
@@ -705,7 +733,7 @@ header {
     line-height: 1.5rem;
     font-family: 'Open Sans', sans-serif;
     padding: 0.6rem 1.2rem;
-    border-radius: 0.3rem;
+    margin-top: 1.5rem;
     cursor: pointer;
     color: rgb(38, 57, 71);
     background: #FFF;
@@ -729,6 +757,8 @@ header {
 .about-document {
     .text-shadow;
     font-size: 1rem;
+    width: 40%;
+    margin: 0.8rem auto;
 }
 .document-show {
     display: block;
@@ -779,9 +809,10 @@ header {
             align-items: center;
             .soft-box;
 }
-.where-buy {
+.distributers-title {
     text-align: center;
-    color: rgb(255, 225, 73);
+    color:#fff;
+    margin-bottom: 0.8rem;
 }
 .distributer-card {
     display: -webkit-box;
@@ -797,24 +828,23 @@ header {
     margin: 0.5rem 0;
     text-align: center;
 }
-.distributer-card h4 {
-    color: #ffc650;
-    line-height: 0.1rem;
-    font-weight: 600;
+.city-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
 }
-.distributer-card p {
+.title-city,
+.distributer-name {
     font-size: 1.2rem;
     color: #fefefd;
     line-height: 1.8rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin: 0;
+
 }
-.city-avatar {
-    width: 6.25rem;
-    height: 6.25rem;
-}
-#distributers i {
-    font-size: 1rem;
-    padding-right: 1rem;
-}
+
+
 .map {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 42.8125%;
