@@ -32,7 +32,7 @@ p {
   line-height: 2;
 }
 h2 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lora', serif;
   font-size: 3rem;
   line-height: 3.35rem;
   text-align: center;
@@ -284,91 +284,14 @@ a {
   background-color: rgba(97, 97, 97, 0.54);
 }
 /*-----------Social-icons-hexagon--------------------*/
-.hexagon-wrapper {
-  width: 65px;
-  height: 65px;
-  text-align: center;
-  margin: 20px;
-  position: relative;
-  display: inline-block;
+.social-icon {
+  width: 60px;
+  padding: 0.3rem;
+  transition: all .3s ease;
 }
-@media screen and (max-width: 1032px) {
-  .hexagon-wrapper {
-    margin: 10px;
-  }
-}
-@media screen and (max-width: 962px) {
-  .hexagon-wrapper {
-    margin: 2px;
-  }
-}
-@media screen and (max-width: 890px) {
-  .hexagon-wrapper {
-    width: 45px;
-    height: 45px;
-  }
-}
-.hexagon {
-  background-color: #e29e19;
-  height: 100%;
-  width: 57.735%;
-  display: inline-block;
-  cursor: pointer;
-  box-shadow: inset 0 0 0 0 #e29e19;
-  transition: all ease 0.8s;
-}
-.hexagon:hover {
-  box-shadow: inset 0 100px 0 0 #b47e14;
-}
-.hexagon:before {
-  position: absolute;
-  top: 0;
-  right: 21.1325%;
-  background-color: inherit;
-  height: inherit;
-  width: inherit;
-  content: '';
-  transform: rotate(60deg);
-}
-.hexagon:after {
-  position: absolute;
-  top: 0;
-  right: 21.1325%;
-  background-color: inherit;
-  height: inherit;
-  width: inherit;
-  content: '';
-  transform: rotate(-60deg);
-}
-.hexagon-wrapper .fa-facebook,
-.hexagon-wrapper .fa-vk,
-.hexagon-wrapper .fa-odnoklassniki {
-  position: absolute;
-  z-index: 2;
-  font-size: 2rem;
-  color: #fff;
-  -webkit-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.64);
-  -moz-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.64);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.64);
-}
-@media screen and (max-width: 890px) {
-  .hexagon-wrapper .fa-facebook,
-  .hexagon-wrapper .fa-vk,
-  .hexagon-wrapper .fa-odnoklassniki {
-    font-size: 1.8rem;
-  }
-}
-.fa-vk {
-  top: 25%;
-  left: 20%;
-}
-.fa-facebook {
-  top: 28%;
-  left: 36%;
-}
-.fa-odnoklassniki {
-  top: 23%;
-  left: 34%;
+.social-icon:hover {
+  background-color: #82b3c9;
+  border-radius: 50%;
 }
 /*-----------HEADER PROMO----------*/
 .promo {
@@ -626,6 +549,7 @@ a {
   color: #263947;
   font-size: 1.2rem;
   font-weight: 800;
+  margin-bottom: 0;
 }
 .doc-wrap {
   -ms-flex: 1 2 100%;
@@ -687,33 +611,11 @@ a {
 .document-show {
   display: block;
 }
-.doc-wrap .fa-times {
-  cursor: pointer;
-  right: 1px;
-  top: 0;
-  position: absolute;
-  background-color: rgba(97, 97, 97, 0.39);
-  color: #fff;
-  padding: 0.5rem;
-  font-size: 2rem;
-  -webkit-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.64);
-  -moz-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.64);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.64);
-  border-radius: 5px;
-  box-shadow: 7px 8px 14px -6px rgba(0, 0, 0, 0.64);
-}
 #distributers {
-  background-color: #e3dfd6;
-  background: url(../img/combback.jpg) no-repeat center;
-  background-size: cover;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   width: 100%;
 }
-.wrap-list {
-  background-color: rgba(81, 88, 102, 0.59);
+.distributer-wrap {
+  background-color: rgba(97, 97, 97, 0.54);
   display: -ms-flexbox;
   display: flex;
   -ms-flex: 1 1 40%;
@@ -721,8 +623,6 @@ a {
   margin: 0.9rem;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -ms-flex-pack: distribute;
   justify-content: space-around;
   -ms-flex-align: center;
@@ -732,8 +632,6 @@ a {
 }
 .distributers-title {
   text-align: center;
-  color: #fff;
-  margin-bottom: 0.8rem;
 }
 .distributer-card {
   display: -ms-flexbox;
@@ -752,12 +650,12 @@ a {
 }
 .title-city,
 .distributer-name {
-  font-size: 1.2rem;
-  color: #fefefd;
   line-height: 1.8rem;
   font-weight: 500;
   font-size: 1.5rem;
-  margin: 0;
+}
+.distributer-name {
+  font-style: italic;
 }
 .map {
   -ms-flex: 1 1 42.8125%;
@@ -780,18 +678,15 @@ footer .container {
   align-items: center;
   overflow: hidden;
 }
-footer .social,
 .contacts {
   -ms-flex: 1 1 30%;
   flex: 1 1 30%;
   border-radius: 5px;
+  position: relative;
 }
 footer .social {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding-top: 1rem;
+  margin: 1rem auto;
+  margin-right: 10rem;
 }
 footer p {
   font-size: 1rem;
