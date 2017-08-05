@@ -522,7 +522,16 @@ a {
         right: -97px;
         bottom: 0;
     }
+    .map-link {
+        color: inherit;
+        border-bottom: 1px solid inherit;
+
+        &:hover {
+            border-bottom-color: @dark-background;
+        }
+    }
  }
+
  .text-block .annotation {
     color: rgb(46, 20, 1);
     font-size: 1.2rem;
@@ -637,9 +646,10 @@ a {
     line-height: 1.6rem;
 }
 .describe-product {
-    text-align: center;
+    text-align: left;
     display: block;
     font-size: 1.2rem;
+    line-height: 1.5;
     color: rgb(20, 30, 3);
 }
 .slider-doc {

@@ -395,6 +395,13 @@ a {
   right: -97px;
   bottom: 0;
 }
+.text-block-content .map-link {
+  color: inherit;
+  border-bottom: 1px solid inherit;
+}
+.text-block-content .map-link:hover {
+  border-bottom-color: rgba(97, 97, 97, 0.39);
+}
 .text-block .annotation {
   color: #2e1401;
   font-size: 1.2rem;
@@ -495,9 +502,10 @@ a {
   line-height: 1.6rem;
 }
 .describe-product {
-  text-align: center;
+  text-align: left;
   display: block;
   font-size: 1.2rem;
+  line-height: 1.5;
   color: #141e03;
 }
 .slider-doc {
