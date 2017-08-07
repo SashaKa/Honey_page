@@ -495,11 +495,11 @@ a {
 }
 .annotation-product {
   margin: 0;
-  color: #391401;
+  color: inherit;
   font-size: 1.2rem;
   font-weight: 700;
-  font-style: italic;
   line-height: 1.6rem;
+  font-style: normal;
 }
 .describe-product {
   text-align: left;
