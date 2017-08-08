@@ -86,7 +86,7 @@ a {
         -ms-flex-align: center;
             align-items: center;
     overflow: hidden;
-    background: url(../img/honey2.jpg)  no-repeat;
+    background: url(../img/bg5.jpg)  no-repeat;
     background-position: center;
     -ms-background-size: cover;
     background-size: cover;
@@ -188,18 +188,18 @@ a {
     text-decoration: none;
     color: #e2dfdd;
     line-height: 1.5rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 .mobile-link::after{
     display: none;
-    .soft-box;
     position: absolute;
     content: "";
-    width: 90%;
-    height: 2px;
-    background-color: #fff;
-    bottom: -3px;
-    left:5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: url(../img/bee.svg) no-repeat center;
+    top: 0;
+    right: -30px;
 }
 .mobile-link:hover::after {
     display: block;
@@ -766,7 +766,38 @@ a {
 .document-show {
     display: block;
 }
+.close-btn,
+.close-btn2,
+.close-btn3 {
+    background-color: #f8f7f4;
+    width: 19px;
+    height: 19px;
+    font-size: 0;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 7px;
+    right: 7px;
 
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        width: 19px;
+        height: 2px;
+        background-color: #131313;
+        top: 8px;
+        left: 0;
+    }
+    &::before {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    &::after {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+}
 #distributers{
     width: 100%;
 }
@@ -824,6 +855,13 @@ a {
 }
 .distributer-name {
     font-style:italic; 
+}
+.social-icon-distributors {
+    width: 30px;
+    height: 30px;
+}
+.distributers-contact {
+    margin: 1.2rem auto;
 }
 .map {
     -webkit-box-flex: 1;
@@ -958,7 +996,7 @@ footer i {
     }
 
 }
-@media screen and (min-width:320px) and (max-width: 600px) {
+@media screen and (min-width:320px) and (max-width: 768px) {
     body {
         margin: 0;
     }
