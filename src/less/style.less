@@ -44,17 +44,20 @@ p {
     margin: 1rem 1.5rem;
 }
 .header-text {
-    font-family: 'Lora', serif;
-    font-size: 2em;
+    font-family: 'Open Sans', sans-serif;
+     font-size: 2em;
     line-height: 2;
+    margin-bottom: 0.2rem;
+    text-align: center;
+
 }
 h2 {
-     font-family: 'Lora', serif;
+     font-family: 'Open Sans', sans-serif;
      font-size: 3rem;
      line-height: 3.35rem;
      text-align: center;
-     margin-top: 1.5rem;
-    //  .text-shadow;
+    padding-top: 1rem;
+    margin-top: 0;
 }
 h4 {
     font-family: 'Open Sans', sans-serif;
@@ -76,23 +79,91 @@ a {
 
 /*------------------------*HEADER------------------------------*/
 .header-box {
+    height: 100vh;
+    overflow: hidden;
+    background: url(../img/comb.jpg)  no-repeat;
+    
+    -ms-background-size: cover;
+    background-size: cover;
+
+    @media screen and(min-width:320px) {
+        background-position: center -30px;
+    }
+     @media screen and(min-width:768px) {
+        background-position: center -14px;
+    }
+    @media screen and(min-width:1024px) {
+        background-position: center -153px;
+    }
+    @media screen and(min-width:1220px) {
+        background-position: center -381px;
+    }
+    @media screen and(min-width:1920px) {
+        background-position: center center;
+    }
+}
+
+.logo {
+    width: 11%;
+}
+.promo {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 3% auto;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    overflow: hidden;
-    background: url(../img/bg5.jpg)  no-repeat;
-    background-position: center;
-    -ms-background-size: cover;
-    background-size: cover;
+    color:#131313;
+    width: 36%;
+   
 }
-.logo {
-    width: 11%;
+.promo__post-header {
+    text-align: left;
+    margin: 1.2rem;
+    
+    font-weight: 400;
+    line-height: 1.5;
+
+    @media screen and (max-width:768px){
+        display: none;
+    }
+}
+.product-btn{
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin: 2rem;
+    text-decoration: none;
+    background-color: @honey;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0.6rem 1.2rem;
+    padding-bottom: 0.8rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    box-shadow: inset 0 100px 0 0 @honey;
+    color: #FFF;
+	-webkit-transition: all ease 0.8s;
+	-moz-transition: all ease 0.8s;
+    transition: all ease 0.8s;
+    
+    @media screen and (max-width:506px) {
+        margin-top: 2rem;
+    }
+    @media screen and (max-width:768px) {
+        margin-top: 7rem;
+    }
+
+}
+
+.product-btn:hover {
+    box-shadow: inset 0 0 0 0 darken(@honey, 10%);
 }
 /*-----responsive-menu---------------*/
 .burger-menu {
@@ -313,84 +384,7 @@ a {
     background-color:rgba(97, 97, 97, 0.54);
 
 }
-/*-----------Social-icons-hexagon--------------------*/
-// .hexagon-wrapper {
-//     width: 65px;
-//     height: 65px;
-//     text-align: center;
-//     margin: 20px;
-//     position: relative;
-//     display: inline-block;
-// }
-// @media screen and (max-width: 1032px) {
-//     .hexagon-wrapper{
-//         margin: 10px;}
-// }
-// @media screen and (max-width: 962px) {
-//     .hexagon-wrapper{
-//         margin: 2px;}
-// }
-// @media screen and (max-width: 890px) {
-//     .hexagon-wrapper{
-//         width: 45px;
-//         height: 45px;
-//     }
-// }
-// .hexagon {
-//     background-color:#fff;
-//     height: 100%;
-//     width: 57.735%;
-//     display: inline-block;
-//     cursor: pointer;
-//     box-shadow: inset 0 0 0 0 #fff;
-// 	-webkit-transition: all ease 0.8s;
-// 	-moz-transition: all ease 0.8s;
-// 	transition: all ease 0.8s;
-// }
-// .hexagon:hover{
-//     box-shadow: inset 0 100px 0 0 darken(@hexagon-background, 10%);
-// }
-// .hexagon:before {
-//   position: absolute;
-//   top: 0;
-//   right: 21.1325%;
-//   background-color: #fff;
-//   height: inherit;
-//   width: inherit;
-//   content: '';
-//   transform: rotate(60deg);
-// }
 
-// .hexagon:after {
-//   position: absolute;
-//   top: 0;
-//   right: 21.1325%;
-//   background-color: #fff;
-//   height: inherit;
-//   width: inherit;
-//   content: '';
-//   transform: rotate(-60deg);
-// }
-
-// .social .social-link {
-//     width: 60px;
-//     height: 60px;
-//     cursor: pointer;
-//     margin: 0 auto;
-    
-//     background-color: #1565c0;
-// }
-
-// .icon {
-//     background-repeat:  no-repeat;
-//     background-position: center;
-// }
-// .icon-vk {
-//     background-image: url(../img/facebook.svg);
-// }
-// .icon-odnoklassniki {
-//     background: url(../img/odnoklassniki.svg) no-repeat center;
-// }
 .social-icon {
     width: 60px;
     padding: 0.3rem;
@@ -403,55 +397,6 @@ a {
     
 }
 
-/*-----------HEADER PROMO----------*/
-.promo {
-    width: 48%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin: 12% auto;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;;
-    color: #f6f5f3;
-    background-color: @dark-background;
-    .soft-box;
-    .text-shadow;
-}
-.promo__post-header {
-    text-align: center;
-    margin: 1.2rem;
-    width: 70%;
-    font-weight: 400;
-    line-height: 1.5;
-}
-.product-btn{
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    margin-bottom: 2rem;
-    text-decoration: none;
-    background-color: @honey;
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    font-family: 'Open Sans', sans-serif;
-    padding: 0.6rem 1.2rem;
-    padding-bottom: 0.8rem;
-    border-radius: 0.3rem;
-    cursor: pointer;
-    box-shadow: inset 0 100px 0 0 @honey;
-    color: #FFF;
-	-webkit-transition: all ease 0.8s;
-	-moz-transition: all ease 0.8s;
-	transition: all ease 0.8s;
-}
-.product-btn:hover {
-    box-shadow: inset 0 0 0 0 darken(@honey, 10%);
-}
 // -------------------------MAIN----------------------*/
 #aboutus {
     display: -webkit-box;
@@ -800,22 +745,17 @@ a {
 }
 #distributers{
     width: 100%;
+    background-image: url(../img/bg-bee.jpg);
 }
 .distributer-wrap {
-    background-color: rgba(97, 97, 97, 0.54);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
         -ms-flex: 1 1 40%;
             flex: 1 1 40%;
-    margin: 0.9rem;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    // -webkit-box-orient: vertical;
-    // -webkit-box-direction: normal;
-    //     -ms-flex-direction: column;
-    //         flex-direction: column;
     -ms-flex-pack: distribute;
         justify-content: space-around;
     -webkit-box-align: center;
