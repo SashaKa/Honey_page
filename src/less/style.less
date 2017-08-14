@@ -1,6 +1,6 @@
 // Less mixins
 
-@import url('https://fonts.googleapis.com/css?family=Lora:400,700&subset=cyrillic');
+
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=cyrillic');
 
 
@@ -79,27 +79,28 @@ a {
 
 /*------------------------*HEADER------------------------------*/
 .header-box {
-    height: 100vh;
-    overflow: hidden;
-    background: url(../img/comb.jpg)  no-repeat;
     
+    overflow: hidden;
+    background: url(../img/comb.jpg)  no-repeat center 25% fixed;
     -ms-background-size: cover;
     background-size: cover;
 
     @media screen and(min-width:320px) {
-        background-position: center -30px;
+        
+        height: 80vh;
     }
      @media screen and(min-width:768px) {
-        background-position: center -14px;
+        
+        height: 100vh;
     }
     @media screen and(min-width:1024px) {
-        background-position: center -153px;
+       
     }
     @media screen and(min-width:1220px) {
-        background-position: center -381px;
+        
     }
     @media screen and(min-width:1920px) {
-        background-position: center center;
+       
     }
 }
 
@@ -119,7 +120,7 @@ a {
         -ms-flex-align: center;
             align-items: center;
     color:#131313;
-    width: 36%;
+    width: 48%;
    
 }
 .promo__post-header {
@@ -137,7 +138,7 @@ a {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
-    margin: 2rem;
+    margin: 2rem auto;
     text-decoration: none;
     background-color: @honey;
     font-size: 1.5rem;
@@ -157,7 +158,7 @@ a {
         margin-top: 2rem;
     }
     @media screen and (max-width:768px) {
-        margin-top: 7rem;
+       
     }
 
 }
@@ -385,14 +386,21 @@ a {
 
 }
 
-.social-icon {
+.social-icon,
+.social-icon-distributors {
     width: 60px;
-    padding: 0.3rem;
-    transition: all .3s ease;
+    padding: 0.9rem;
+    background: #e29e19;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: inset 0 100px 0 0 @honey;
+    fill: #FFF;
+	-webkit-transition: all ease 0.8s;
+	-moz-transition: all ease 0.8s;
+    transition: all ease 0.8s;
     
     &:hover {
-        background-color:#82b3c9;
-        border-radius: 50%;
+        box-shadow: inset 0 0 0 0 darken(@honey, 10%); 
     }
     
 }
@@ -421,7 +429,6 @@ a {
 
 }
 .text-block {
-     
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -482,7 +489,11 @@ a {
     font-size: 1.2rem;
     font-weight: 800;
     margin: 0 auto;
-    width: 30%;
+    width: 50%;
+
+    @media screen and (max-width: 768px) {
+        width: 75%
+    }
  }
 .text-block .avatar {
     text-align: center;
@@ -577,6 +588,7 @@ a {
             align-items: center;
     padding: 1rem 0.5rem;
     .gradient;
+    order: -1;
 }
 .title-product {
     padding-bottom: 0.5rem;
@@ -782,8 +794,8 @@ a {
     text-align: center;
 }
 .city-avatar {
-    width: 100px;
-    height: 100px;
+    width: 10rem;
+    height: 10.1rem;
     border-radius: 50%;
 }
 
@@ -797,17 +809,15 @@ a {
     font-style:italic; 
 }
 .social-icon-distributors {
-    width: 30px;
-    height: 30px;
+  
 }
 .distributers-contact {
     margin: 1.2rem auto;
 }
-.map {
+#map {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 42.8125%;
             flex: 1 1 42.8125%;
-            margin: 0.9rem;
 }
 /*--------footer-----------*/
 footer  {
@@ -862,8 +872,9 @@ footer i {
 }
 @media screen and (max-width: 840px) {
 
-    .map {
+    #map {
         width: 96%;
+        margin: 0 auto;
     }
 }
 @media screen and (max-width: 768px) {
