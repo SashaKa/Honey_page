@@ -40,3 +40,4 @@ closeBtn2.addEventListener('click', () => {
 closeBtn3.addEventListener('click', () => {
     reward.classList.remove('document-show')
 })
+
