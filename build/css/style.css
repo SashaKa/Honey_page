@@ -358,6 +358,8 @@ a {
   -ms-flex-align: center;
   align-items: center;
   color: rgba(97, 97, 97, 0.39);
+  background: url(../img/bg-bee.jpg) repeat center;
+  background-size: contain;
 }
 @media screen and (max-width: 760px) {
   #aboutus {
@@ -390,20 +392,32 @@ a {
   margin-top: 1rem;
   position: relative;
 }
+@media screen and (max-width: 760px) {
+  .text-block-content {
+    width: 75%;
+  }
+}
 .text-block-content:before,
 .text-block-content:after {
   position: absolute;
   content: "";
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   background: url(../img/quotes.svg) no-repeat center;
+}
+@media screen and (max-width: 760px) {
+  .text-block-content:before,
+  .text-block-content:after {
+    width: 20px;
+    height: 20px;
+  }
 }
 .text-block-content::before {
   top: 0;
-  left: -87px;
+  left: -57px;
 }
 .text-block-content::after {
-  right: -97px;
+  right: -47px;
   bottom: 0;
 }
 .text-block-content .map-link {

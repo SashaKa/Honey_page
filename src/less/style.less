@@ -416,6 +416,8 @@ a {
         -ms-flex-align: center;
             align-items: center;
     color: @dark-background;
+    background: url(../img/bg-bee.jpg) repeat center;
+    background-size: contain;
 
 }
 
@@ -458,20 +460,30 @@ a {
     margin-top: 1rem;
     position: relative;
 
+    @media screen and (max-width: 760px) {
+       width: 75%;
+      
+    }
+
     &:before, 
     &:after {
         position: absolute;
         content: "";
-        width: 60px;
-        height: 60px;
+        width: 40px;
+        height: 40px;
         background: url(../img/quotes.svg) no-repeat center;
+
+        @media screen and (max-width: 760px) {
+            width: 20px;
+            height: 20px;
+        }
     }
     &::before {
         top: 0;
-        left: -87px;
+        left: -57px;
     }
     &::after{
-        right: -97px;
+        right: -47px;
         bottom: 0;
     }
     .map-link {
