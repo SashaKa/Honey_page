@@ -540,6 +540,48 @@ a {
   line-height: 1.5;
   color: #141e03;
 }
+.read-more-input {
+  display: none;
+}
+@media screen and (min-width: 320px) and (max-width: 748px) {
+  .read-more-content {
+    opacity: 0;
+    max-height: 0;
+    font-size: 0;
+    transition: .25s ease;
+  }
+}
+@media screen and (min-width: 749px) {
+  .read-more-content {
+    opacity: 1;
+  }
+}
+.read-more-input:checked ~ .read-more-wrap .read-more-content {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+}
+.read-more-input ~ .read-more-btn:before {
+  content: 'Читать больше';
+}
+.read-more-input:checked ~ .read-more-btn:before {
+  content: 'Закрыть';
+}
+.read-more-btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 .5em;
+  color: #666;
+  font-size: .9em;
+  line-height: 2;
+  border: 1px solid #ddd;
+  border-radius: .25em;
+}
+@media screen and (min-width: 749px) {
+  .read-more-btn {
+    opacity: 0;
+  }
+}
 .slider-doc {
   display: -ms-flexbox;
   display: flex;
